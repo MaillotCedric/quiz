@@ -15,3 +15,8 @@ Dans le cadre des plans de perfectionnements du personnel, un chef de secteur se
 - Installer un environnement virtuel : `py -m venv .env`
 - Lancer l'environnement virtuel : `.env\Scripts\activate.bat`
 - Installer les différents packages (Django, ...) : `pip install -r requirements.txt`
+- Effectuer les premières migrations : `cd src` puis `py manage.py migrate`
+
+## Lancer le serveur Django :
+
+- Vérifier que l'environnement virtuel est lancé et que vous êtes bien dans le dossier 'src' : `py manage.py runserver`
