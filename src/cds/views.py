@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from collab.models import Quiz, Questions
+#from collab.models import Quiz, Questions
 from django.template import loader
 
 #-------------------------------------
