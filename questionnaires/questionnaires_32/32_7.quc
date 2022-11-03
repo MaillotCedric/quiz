@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>§</titre>
+    <intitule>Les maçons décoffrent l'escalier :</intitule>
+    <listerep>
+      <reponse>En 2 étapes</reponse>
+      <reponse>En 3 étapes</reponse>
+      <reponse>En 4 étapes</reponse>
+      <reponse>En 5 étapes</reponse>
+    </listerep>
+    <feedback>Les maçons décoffrent l'escalier dès la fin du coulage, dès le durcissement du béton et après le 7ème jour.</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>§</titre>
+    <intitule>Lorsque le décoffrage de l'escalier est terminé, 
+il convient d'installer :</intitule>
+    <listerep>
+      <reponse>Un échafaudage</reponse>
+      <reponse>Une barrière interdisant l'accès</reponse>
+      <reponse>Un garde-corps provisoire</reponse>
+      <reponse>Une échelle</reponse>
+    </listerep>
+    <feedback>Il faut prévenir les risques de chute côté vide.</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>§</titre>
+    <intitule>Pour décoffrer la joue de la 2ème volée avec soin, 
+on retire en premier :</intitule>
+    <listerep>
+      <reponse>La lisse d'extrémité côté vide</reponse>
+      <reponse>La lisse de butée côté joue</reponse>
+      <reponse>Les butons</reponse>
+      <reponse>Les traverses</reponse>
+    </listerep>
+    <feedback>Les lisses d'extrémité et de butée côté joue sont retirées en dernier. Les traverses maintiennent la peau du coffrage de la poutre.</feedback>
+  </question>
+  <question bonne="4" duree="00:00:30.00" coeff="1">
+    <titre>§</titre>
+    <intitule>Le décoffrage de l'ensemble de la paillasse de la 2ème volée est décollée, le maçon retire en priorité :</intitule>
+    <listerep>
+      <reponse>La joue</reponse>
+      <reponse>Les chapeaux rampants</reponse>
+      <reponse>Les étais intermédiaires</reponse>
+      <reponse>Les planches de coffrage</reponse>
+    </listerep>
+    <feedback>La peau du coffrage est retirée en premier.</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>§</titre>
+    <intitule>Pour dégager complètement l'étaiement et le coffrage du palier intermédiaire et de la paillasse, le maçon retire :</intitule>
+    <listerep>
+      <reponse>Les chevrons rampants</reponse>
+      <reponse>Les semelles des étais</reponse>
+      <reponse>L'ensemble des coins</reponse>
+      <reponse>Le lest réalisé avec des agglomérés</reponse>
+    </listerep>
+    <feedback>Le positionnement des coins avec du jeu sous les pieds droits permet aux éléments de l'étaiement de descendre pour une réutilisation ultérieure.</feedback>
+  </question>
+</questionnaire>

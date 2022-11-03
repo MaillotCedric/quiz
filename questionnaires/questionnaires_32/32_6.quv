@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire notemini="75">
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Décoffrage des marches</titre>
+    <intitule>Pour réaliser la finition des marches, il faut décoffrer :</intitule>
+    <listerep>
+      <reponse>La paillasse en premier puis le coffrage de rive</reponse>
+      <reponse>Uniquement le coffrage des contremarches</reponse>
+      <reponse>Le coffrage des contremarches puis le coffrage de rive</reponse>
+      <reponse>Uniquement le coffrage de la paillasse</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Outils de décoffrage</titre>
+    <intitule>Les outils les plus adaptés pour décoffrer sont :</intitule>
+    <listerep>
+      <reponse>La tenaille et la massette</reponse>
+      <reponse>Le pied de biche et le marteau de coffreur</reponse>
+      <reponse>Le burin de maçon et le marteau de coffreur</reponse>
+      <reponse>La pince à ferrailler et la massette</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Entretien des bois de coffrage</titre>
+    <intitule>Après décoffrage de l'escalier, vous nettoyez
+les planches de coffrage :</intitule>
+    <listerep>
+      <reponse>A la fin de la journée</reponse>
+      <reponse>Au fur et à mesure du décoffrage</reponse>
+      <reponse>Après avoir fait la finition des marches</reponse>
+      <reponse>Quand l'escalier est entièrement décoffré</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="1">
+    <titre>Finition des marches</titre>
+    <intitule>Plusieurs types de finitions de marches sont possibles :</intitule>
+    <listerep>
+      <reponse>La chape rapportée est réalisée sur un béton durci et la chape refluée est un apport de mortier sur béton frais</reponse>
+      <reponse>La chape rapportée est réalisée sur un béton frais et la chape refluée se fait sur un béton durci</reponse>
+      <reponse>La chape incorporée se fait sur un béton dur</reponse>
+      <reponse>La chape adaptée est un apport de poudre sur un béton durci</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Dosage du mortier</titre>
+    <intitule>Pour préparer le mortier de chape,
+vous faites quel mélange :</intitule>
+    <listerep>
+      <reponse>2 brouettes de gros sable pour un sac de ciment</reponse>
+      <reponse>1 brouette et demi de gros sable pour 1 sac de ciment</reponse>
+      <reponse>1 brouette et demi de sable tamisé pour 1 sac de ciment</reponse>
+      <reponse>2 brouettes de sable tamisé pour 1/2 sac de ciment et 1/2 sac de chaux</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Produit d'accrochage</titre>
+    <intitule>Avant de mettre en place le mortier, vous utilisez :</intitule>
+    <listerep>
+      <reponse>Un produit de démoulage</reponse>
+      <reponse>Une barbotine composée de 1 volume de sable pour
+1 volume de ciment</reponse>
+      <reponse>Un adjuvant retardateur de prise</reponse>
+      <reponse>Une barbotine composée de 4 volumes de sable pour
+1 volume de ciment</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="1">
+    <titre>Plasticité des mortiers</titre>
+    <intitule>Pour réaliser l'enduit d'une contremarche, vous utilisez :</intitule>
+    <listerep>
+      <reponse>Un mortier à consistance plastique</reponse>
+      <reponse>Un mortier à consistance ferme</reponse>
+      <reponse>Un mortier à consistance liquide</reponse>
+      <reponse>Un mortier plastifié</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="2">
+    <titre>Organisation du travail</titre>
+    <intitule>Pour réaliser la finition des marches :</intitule>
+    <listerep>
+      <reponse>Vous commencez par le bas de l'escalier</reponse>
+      <reponse>Vous commencez par le haut de l'escalier, vous enduisez la contremarche et en suivant le dessus de la marche</reponse>
+      <reponse>Vous commencez par le haut de l'escalier</reponse>
+      <reponse>Vous enduisez d'abord toutes les contremarches</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Le nez de marche</titre>
+    <intitule>Pour réaliser la finition des nez de marche :</intitule>
+    <listerep>
+      <reponse>Vous passez le fer à marche après avoir bouchardé</reponse>
+      <reponse>Vous enlevez la règle et vous passez le fer à marche</reponse>
+      <reponse>Vous passez le fer à marche avant de boucharder et vous affinez l'esthétique en passant 3 à 4 fois le fer à marche</reponse>
+      <reponse>Vous passez le fer à marche lorsque le mortier est dur</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="1">
+    <titre>Le bouchardage</titre>
+    <intitule>Quand vous utilisez la boucharde :</intitule>
+    <listerep>
+      <reponse>Vous la passez en tirant et vous faites chevaucher les passages du rouleau</reponse>
+      <reponse>Vous la passez en poussant</reponse>
+      <reponse>Vous la passez en faisant des allers et retours</reponse>
+      <reponse>Vous la passez quand le mortier est très liquide</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions de l'escalier</feedback>
+  </question>
+</questionnaire>

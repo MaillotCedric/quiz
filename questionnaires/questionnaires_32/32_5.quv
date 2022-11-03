@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire notemini="75">
+  <question bonne="1" duree="00:00:30.00" coeff="2">
+    <titre>Mettre en oeuvre le béton</titre>
+    <intitule>Quand vous couler un escalier, vous commencer par :</intitule>
+    <listerep>
+      <reponse>Le bas de l'escalier</reponse>
+      <reponse>Le palier intermédiaire en remontant</reponse>
+      <reponse>Le haut de l'escalier</reponse>
+      <reponse>Couler la paillasse</reponse>
+    </listerep>
+    <feedback>Couler un escalier</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Contrôle du coffrage</titre>
+    <intitule>Quand vous couler un escalier , vous contrôler la tenue de votre coffrage :</intitule>
+    <listerep>
+      <reponse>Avant le coulage au moment de huiler le coffrage</reponse>
+      <reponse>Pendant et après le coulage, au moment du nettoyage du coffrage</reponse>
+      <reponse>Le lendemain</reponse>
+    </listerep>
+    <feedback>Couler l'escalier</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c9_1.jpg" bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Calcul du volume de béton</titre>
+    <intitule>Combien faut-il de béton pour couler l'escalier,
+présenté sur le dessin :
+(Donnez votre réponse en litres).
+Pour afficher le dessin cliquez sur l'icône "oeil".</intitule>
+    <listerep>
+      <reponse>269 litres</reponse>
+      <reponse>323 litres</reponse>
+      <reponse>592 litres</reponse>
+      <reponse>914 litres</reponse>
+    </listerep>
+    <feedback>Couler l'escalier</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Vibration du béton</titre>
+    <intitule>Pour vibrer le béton, vous le faites :</intitule>
+    <listerep>
+      <reponse>Quand tout le béton a été mis dans le coffrage</reponse>
+      <reponse>Avec une barre de fer</reponse>
+      <reponse>Au fur et à mesure que le béton est dans le coffrage et avec une aiguille vibrante</reponse>
+      <reponse>Avec la truelle et le marteau</reponse>
+    </listerep>
+    <feedback>Couler l'escalier</feedback>
+  </question>
+</questionnaire>

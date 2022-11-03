@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire>
+  <question bonne="3" coeff="1">
+    <intitule>Pour prévenir des chutes au droit des trémies et du vide des escaliers, il faut installer :</intitule>
+    <listerep>
+      <reponse>Une lisse</reponse>
+      <reponse>Une plinthe</reponse>
+      <reponse>Un garde-corps</reponse>
+      <reponse>Une main courante</reponse>
+    </listerep>
+    <feedback>La protection contre les chutes est faite par un ensemble d'éléments, main courante, lisse intermédiaire et plinthe appelé garde-corps.</feedback>
+  </question>
+  <question bonne="2" coeff="1">
+    <intitule>Comment appelle-t-on le volume réservé à l'emplacement de l'escalier dans une construction :</intitule>
+    <listerep>
+      <reponse>Une trémie</reponse>
+      <reponse>Une cage d'escalier</reponse>
+      <reponse>Une échappée</reponse>
+      <reponse>Un mur d'échiffre</reponse>
+    </listerep>
+    <feedback>La cage est le volume occupé par un escalier.</feedback>
+  </question>
+  <question bonne="3" coeff="1">
+    <intitule>Comment appelle-t-on la partie horizontale de l'escalier sur laquelle le pied s'appuie pour monter :</intitule>
+    <listerep>
+      <reponse>Le nez de marche</reponse>
+      <reponse>La contremarche</reponse>
+      <reponse>Le dessus de la marche</reponse>
+      <reponse>La paillasse</reponse>
+    </listerep>
+    <feedback>Le giron détermine la largeur du dessus de la marche.</feedback>
+  </question>
+  <question bonne="2" coeff="1">
+    <intitule>La trajectoire suivie par une personne qui monte ou qui descend un escalier, s'appelle :</intitule>
+    <listerep>
+      <reponse>La contremarche</reponse>
+      <reponse>La ligne de foulée</reponse>
+      <reponse>La volée</reponse>
+      <reponse>La cage d'escalier</reponse>
+    </listerep>
+    <feedback>C'est la ligne théorique qu'une personne emprunte pour monter ou descendre un escalier.</feedback>
+  </question>
+  <question bonne="3" coeff="1">
+    <intitule>Le mur qui sert d'appui à l'escalier est appelé :</intitule>
+    <listerep>
+      <reponse>Mur de soutien</reponse>
+      <reponse>Mur périphérique</reponse>
+      <reponse>Mur d'échiffre</reponse>
+      <reponse>Mur pignon</reponse>
+    </listerep>
+    <feedback>Autrefois guérite en bois, échiffre est aujourd'hui un mur qui porte les abouts des marches.</feedback>
+  </question>
+</questionnaire>

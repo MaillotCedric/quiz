@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire>
+  <question bonne="3" coeff="1">
+    <intitule>Combien de scie peut-on utiliser pour réaliser des coupes droites, en biais ou en obliques sur des pièces de bois :</intitule>
+    <listerep>
+      <reponse>2</reponse>
+      <reponse>3</reponse>
+      <reponse>4</reponse>
+      <reponse>5</reponse>
+    </listerep>
+    <feedback>La scie à bûches, l'égoïne, la scie sauteuse et la scie circulaire portative sont les plus utilisées sur le chantier.</feedback>
+  </question>
+  <question bonne="4" coeff="1">
+    <intitule>Pour réaliser des coupes sur des bois de coffrage dans de bonnes conditions, on utilise comme support :</intitule>
+    <listerep>
+      <reponse>Le dessus de la caisse à outils</reponse>
+      <reponse>Le dessus d'un mur en maçonnerie</reponse>
+      <reponse>Le dessus d'une palette de briques ou d'agglomérés</reponse>
+      <reponse>Un établi stable et adapté</reponse>
+    </listerep>
+    <feedback>Pour réaliser des coupes sur des bois et dans de bonne condition, il faut utiliser un support stable et adapté.</feedback>
+  </question>
+  <question bonne="3" coeff="1">
+    <intitule>Pour réaliser des coupes en faux équerrage, le maçon trace l'angle de coupe à l'aide :</intitule>
+    <listerep>
+      <reponse>D'un rapporteur</reponse>
+      <reponse>D'un compas</reponse>
+      <reponse>D'une fausse équerre</reponse>
+      <reponse>D'une équerre à talon</reponse>
+    </listerep>
+    <feedback>Le maçon trace des angles avec une équerre appelée communément "sauterelle".</feedback>
+  </question>
+  <question bonne="1" coeff="1">
+    <intitule>Pour réaliser des coupes dans de bonnes conditions avec du matériel électroportatif, il est nécessaire :</intitule>
+    <listerep>
+      <reponse>Qu'il réponde aux normes de sécurité en vigueur</reponse>
+      <reponse>Qu'il soit de bonne marque de fabrication</reponse>
+      <reponse>Qu'il soit raccordé électriquement à du 48 volts</reponse>
+      <reponse>Qu'il soit raccordé électriquement à du 24 volts</reponse>
+    </listerep>
+    <feedback>La plaque signalétique donne toutes les informations pour répondre aux normes de sécurité en vigueur.</feedback>
+  </question>
+  <question bonne="2" coeff="1">
+    <intitule>Pour réaliser une coupe à la scie circulaire électroportative, le maçon la positionne sur le tracé :</intitule>
+    <listerep>
+      <reponse>En soulevant la cape de protection</reponse>
+      <reponse>Au moyen du guide situé à l'avant de l'outil</reponse>
+      <reponse>En se faisant aider par son chef d'équipe</reponse>
+      <reponse>Sans précautions particulières</reponse>
+    </listerep>
+    <feedback>Un guide à l'avant de la scie permet de voir le tracé réalisé sur les pièces de bois.</feedback>
+  </question>
+</questionnaire>

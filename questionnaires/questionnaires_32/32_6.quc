@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire>
+  <question bonne="3" coeff="1">
+    <intitule>La chape reflué est réalisée :</intitule>
+    <listerep>
+      <reponse>Lorsque le béton est dur</reponse>
+      <reponse>Lorsque le béton à fait sa prise</reponse>
+      <reponse>Lorsque le béton est encore frais</reponse>
+      <reponse>Lorsqu'on a le temps</reponse>
+    </listerep>
+    <feedback>Pour avoir une bonne adhérence, le mortier doit être appliqué sur du béton encore frais.</feedback>
+  </question>
+  <question bonne="2" coeff="1">
+    <intitule>La chape incorporée est réalisée :</intitule>
+    <listerep>
+      <reponse>Lorsque le béton à au moins 48 heures de durcissement</reponse>
+      <reponse>Lorsque le béton est encore frais et a suffisamment durci</reponse>
+      <reponse>Dès la fin du coulage</reponse>
+      <reponse>Lorsqu'on a le temps</reponse>
+    </listerep>
+    <feedback>La finition de la 2ème volée est réalisée dès la prise du béton.</feedback>
+  </question>
+  <question bonne="3" coeff="1">
+    <intitule>A quel moment est réalisé la finition
+des contremarches :</intitule>
+    <listerep>
+      <reponse>Dès la fin des marches de la 1ère volée</reponse>
+      <reponse>Dès la fin de la finition des marches de la 1ère et 2ème volée</reponse>
+      <reponse>Dès que le mortier de finition des marches et du palier intermédiaire a durci 24 heures minimum</reponse>
+      <reponse>A n'importe quel moment</reponse>
+    </listerep>
+    <feedback>Pour réaliser la finition des contremarches, il est nécessaire que les marches soient terminées.</feedback>
+  </question>
+  <question bonne="1" coeff="1">
+    <intitule>La chape rapportée est réalisée :</intitule>
+    <listerep>
+      <reponse>Lorsque le béton à au moins 48 heures de durcissement</reponse>
+      <reponse>Lorsque le béton est encore frais et a suffisamment durci</reponse>
+      <reponse>Dès la fin du coulage</reponse>
+      <reponse>Lorsqu'on a le temps</reponse>
+    </listerep>
+    <feedback>La finition de la 2ème volée est réalisée lorsque le béton à 48 heures minimum de durcissement.</feedback>
+  </question>
+  <question bonne="2" coeff="1">
+    <intitule>Pour réaliser la finition des côtés de l'escalier laissés bruts de décoffrage, le maçon :</intitule>
+    <listerep>
+      <reponse>Applique du mortier sans précautions particulières</reponse>
+      <reponse>Prépare le support suivant le produit utilisé</reponse>
+      <reponse>Badigeonne le support avec de l'huile de décoffrage</reponse>
+    </listerep>
+    <feedback>En fonction de l'aspect du béton au décoffrage,
+la surface à enduire est préalablement préparée.</feedback>
+  </question>
+</questionnaire>

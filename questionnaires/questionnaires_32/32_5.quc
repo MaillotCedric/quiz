@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire>
+  <question bonne="3" coeff="1">
+    <intitule>Quelles précautions doit-on prendre avant de couler l'escalier :</intitule>
+    <listerep>
+      <reponse>Passer de l'huile de décoffrage sur le coffrage des paillasses</reponse>
+      <reponse>De forcer les étais métalliques pour créer une contre flèche</reponse>
+      <reponse>Contrôler l'étaiement et mouiller l'intérieur du coffrage</reponse>
+      <reponse>De tracer le brut du dessus des contremarches</reponse>
+    </listerep>
+    <feedback>Il est trop tard pour huiler le coffrage, la paillasse doit 
+être rectiligne et le tracé des contremarches terminé.</feedback>
+  </question>
+  <question bonne="1" coeff="1">
+    <intitule>Pour réaliser le coulage d'un escalier on commence par :</intitule>
+    <listerep>
+      <reponse>Le bas de l'escalier</reponse>
+      <reponse>Le haut de l'escalier</reponse>
+      <reponse>Le palier intermédiaire</reponse>
+      <reponse>N'importe quel endroit</reponse>
+    </listerep>
+    <feedback>Le béton glisse sur le coffrage, il faut éviter la ségrégation.</feedback>
+  </question>
+  <question bonne="2" coeff="1">
+    <intitule>La vibration du béton de la 1ère marche est terminée, le maçon continue son travail :</intitule>
+    <listerep>
+      <reponse>En vibrant le béton des marches suivantes</reponse>
+      <reponse>En continuant le béton de la 1ère volée</reponse>
+      <reponse>En positionnant à l'axe de la contremarche une butée</reponse>
+      <reponse>En talochant le dessus du béton</reponse>
+    </listerep>
+    <feedback>La pervibration du béton dans les marches suivantes provoque une poussée du béton pouvant déformer le coffrage.</feedback>
+  </question>
+  <question bonne="4" coeff="1">
+    <intitule>Quels éléments de ferraillage permettent de maintenir l'écartement entre deux lits d'armatures :</intitule>
+    <listerep>
+      <reponse>Les ligatures sous les aciers en attente des chapeaux sur le palier d'arrivée</reponse>
+      <reponse>Des cales en plastique ou en béton</reponse>
+      <reponse>Des sinusoïdes standards</reponse>
+      <reponse>Des distanciers façonnés sur le chantier</reponse>
+    </listerep>
+    <feedback>Des armatures façonnées sur le chantier permettent de maintenir à distance les armatures placées en partie haute et basse dans le plancher du palier d'arrivée et intermédiaire.</feedback>
+  </question>
+  <question bonne="2" coeff="1">
+    <intitule>Les armatures de la 1ère volée sont placées :</intitule>
+    <listerep>
+      <reponse>Avant les armatures de la 2ème volée</reponse>
+      <reponse>Après les armatures de la 2ème volée</reponse>
+      <reponse>Avant les armatures du palier intermédiaire</reponse>
+      <reponse>Après les armatures du palier intermédiaire</reponse>
+    </listerep>
+    <feedback>La position des armatures de la 2ème volée permettent de tracer les armatures suivantes.</feedback>
+  </question>
+</questionnaire>

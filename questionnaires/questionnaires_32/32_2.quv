@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire notemini="75">
+  <question bonne="1" duree="00:00:30.00" coeff="2">
+    <titre>Modifier les dimensions 1</titre>
+    <intitule>Il vous est demandé de réaliser un escalier composé de 16 marches de 17 cm de hauteur.
+Vous contrôlez la hauteur à monter et vous mesurez d'après le trait d'emprunt 1,70 m. Que faites-vous :</intitule>
+    <listerep>
+      <reponse>Vous recalculez les hauteurs des contremarches</reponse>
+      <reponse>Vous prévoyez la 1ère contremarche plus petite que les autres</reponse>
+      <reponse>Vous ferez une légère pente entre la dernière marche et le palier d'arrivée</reponse>
+      <reponse>Vous répartissez la différence sur les 5 ou 6 premières marches</reponse>
+    </listerep>
+    <feedback>Modifier les dimensions, en fonction des cotes relevées</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Modifier les dimensions 2</titre>
+    <intitule>Vous devez réaliser un escalier en béton armé.
+Vous vous apercevez qu'il n'y a pas d'aciers en attente
+au palier d'arrivée :</intitule>
+    <listerep>
+      <reponse>Vous percez des trous pour enfoncer des aciers de diamètre 10</reponse>
+      <reponse>Vous burinez le béton pour éffectuer une meilleure reprise</reponse>
+      <reponse>Vous décidez de le signaler au responsable du chantier et vous considerez que la solution ne vous concerne pas.</reponse>
+      <reponse>Vous réaliser votre travail sans prendre de dispositions particulières.</reponse>
+    </listerep>
+    <feedback>Modifier les dimensions, en fonction des cotes relevées</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Modifier les dimensions 3</titre>
+    <intitule>Pour relevez les altitudes des paliers d'un escalier,
+vous partez d'après :</intitule>
+    <listerep>
+      <reponse>Du sol du palier de départ</reponse>
+      <reponse>Du sol du palier d'arrivée</reponse>
+      <reponse>Du trait de niveau en vérifiant la distance entre les 2 traits de niveau</reponse>
+      <reponse>Du dessus de palier intermédiaire</reponse>
+    </listerep>
+    <feedback>Modifier les dimensions, en fonction des cotes relevées</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Tracer les paliers</titre>
+    <intitule>Pour tracer l'altitude des paliers d'un escalier,
+vous partez :</intitule>
+    <listerep>
+      <reponse>Du sol, le plus proche de la 1ère marche</reponse>
+      <reponse>Du sol, composant la dernière marche</reponse>
+      <reponse>Du trait de niveau</reponse>
+      <reponse>Du palier intermédiaire</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="1">
+    <titre>Tracer les girons 1</titre>
+    <intitule>Pour tracer les girons d'un escalier,
+vous partez :</intitule>
+    <listerep>
+      <reponse>Par cotes cumulées</reponse>
+      <reponse>Giron par giron</reponse>
+      <reponse>Sur un trait tracé verticalement</reponse>
+      <reponse>Sur le trait de niveau</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Tracer les girons 2</titre>
+    <intitule>On vo}s demande de tracer les girons composant
+1 volée de 4 marches. Chaque giron mesure 28 cm. 
+Pour tracer le 3ème giron, quelle cote devrez-vous lire
+sur votre mètre :</intitule>
+    <listerep>
+      <reponse>28 cm</reponse>
+      <reponse>56 cm</reponse>
+      <reponse>84 cm</reponse>
+      <reponse>112 cm</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Tracer le brut d'un escalier</titre>
+    <intitule>Pour tracer un escalier, vous le tracez :</intitule>
+    <listerep>
+      <reponse>Par les cotes brutes</reponse>
+      <reponse>Par les cotes finies d'abord, ensuite par les cotes brutes</reponse>
+      <reponse>En vérifiant l'alignement des nez de marches</reponse>
+      <reponse>Marche par marche</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c4_1.jpg" bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Tracer la paillasse</titre>
+    <intitule>Pour tracer l'épaisseur de la paillasse d'un escalier,
+vous faites comme pour le schéma :
+Pour afficher le dessin, cliquez sur l'icône "oeil".</intitule>
+    <listerep>
+      <reponse>N° 1</reponse>
+      <reponse>N° 2</reponse>
+      <reponse>N° 3</reponse>
+      <reponse>N° 4</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Tracer le brut des marches</titre>
+    <intitule>Vous avez tracé tous les traits correspondants aux cotes finies d'un escalier, vous allez tracer le brut du dessus de marches, vous le faites :</intitule>
+    <listerep>
+      <reponse>Au dessus du tracé réalisé du plat des marches</reponse>
+      <reponse>Au dessous du tracé réalisé du plat des marches</reponse>
+      <reponse>Au dessous du tracé de la paillasse</reponse>
+      <reponse>Sur le coté gauche des tracés verticaux</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier</feedback>
+  </question>
+</questionnaire>
