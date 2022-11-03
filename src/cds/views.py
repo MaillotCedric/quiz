@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-#from collab.models import Quiz, Questions
+#from cds.models import Quiz, Questions
 from django.template import loader
 
 #-------------------------------------
@@ -39,7 +39,8 @@ def importQuiz(request):
         quest32['coeffQ'+str(i)] = qst.get('coeff')
         #Image à ajouter ?
         #Insertion dans BDD
-        #enregistrementBDDQuestion = Questions(noquiz = (Quiz(noquiz = '32')), evaluation = True, noquestion=i, dureequestion = quest32['dureeQ'+str(i)], coefquestion = quest32['coeffQ'+str(i)], bonnereponsequestion = quest32['bonneRepQ'+str(i)])
+
+        #enregistrementBDDQuestion = Questions(noquiz = (Quiz(noquiz = '32')), evaluation = Quiz(evaluation = True), noquestion=i, dureequestion = quest32['dureeQ'+str(i)], coefquestion = quest32['coeffQ'+str(i)], bonnereponsequestion = quest32['bonneRepQ'+str(i)])
         #enregistrementBDDQuestion.save()
         
 
