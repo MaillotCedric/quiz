@@ -19,9 +19,12 @@ def importQuiz(request):
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
     root = doc.getroot()
 
-    #Créer le quiz 32 dans la table quiz => à rendre dynamique plus tard
-    quiz32 = Quiz(noquiz = '32', evaluation=True, intitulequiz='Questionnaire 32') #Attention au auto_id_quiz=1 => statique #Ajouter gestion d'erreur
-    quiz32.save()
+    try:
+        #Créer le quiz 32 dans la table quiz => à rendre dynamique plus tard
+        quiz32 = Quiz(noquiz = '32', evaluation=True, intitulequiz='Questionnaire 32') #Attention au auto_id_quiz=1 => statique
+        quiz32.save()
+    except:
+        erreur = 1+1
 
     #il faut recup la pk en ayant comme condition les contrainte unique!!!!!!!
     pkRecherchee = Quiz.objects.filter(noquiz='32',evaluation=True).values('auto_id_quiz')
@@ -43,8 +46,8 @@ def importQuiz(request):
         #Image à ajouter ?
         #Insertion dans BDD
         
-        enregistrementBDDQuestion = Questions(auto_id_quiz = (Quiz(auto_id_quiz = pkRecherchee)), noquestion=i, dureequestion = quest32['dureeQ'+str(i)], coefquestion = quest32['coeffQ'+str(i)], bonnereponsequestion = quest32['bonneRepQ'+str(i)])
-        enregistrementBDDQuestion.save()
+        #enregistrementBDDQuestion = Questions(auto_id_quiz = (Quiz(auto_id_quiz = pkRecherchee)), noquestion=i, dureequestion = quest32['dureeQ'+str(i)], coefquestion = quest32['coeffQ'+str(i)], bonnereponsequestion = quest32['bonneRepQ'+str(i)])
+        #enregistrementBDDQuestion.save()
         
 
     #Récupère titre,intitulé et feedback----------------------------------------------
