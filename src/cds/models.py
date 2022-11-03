@@ -10,7 +10,7 @@ class Quiz(models.Model):
 
     class Meta:
         db_table = 'quiz'
-        unique_together = (('noquiz', 'evaluation','auto_id_quiz'),) #Au id quiz peut etre enlevé
+        unique_together = (('noquiz', 'evaluation'),)
 
 class Questions(models.Model):
     auto_id_question = models.AutoField(primary_key=True)
@@ -25,4 +25,4 @@ class Questions(models.Model):
 
     class Meta:
         db_table = 'questions'
-        unique_together = (('noquestion','auto_id_question'),)
+        unique_together = (('noquestion','auto_id_quiz'),)# auto id quiz no question
