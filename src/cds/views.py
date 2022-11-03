@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from collab.models import Metier
+from collab.models import Quiz, Questions
 from django.template import loader
 
 #-------------------------------------
@@ -19,6 +19,10 @@ def importQuiz(request):
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
     root = doc.getroot()
 
+    #Créer le quiz 32 dans la table quiz => à rendre dynamique plus tard
+    quiz32 = Quiz(noquiz = '32', evaluation=True, intitulequiz='Questionnaire 32')
+    quiz32.save()
+
     quest32 = {} # À rendre dynamique...
     #Soit envoyer vers BDD plus tard dans le code avec une autre boucle
     #Soit intégrer directement dans les boucle ci-dessous
@@ -34,6 +38,10 @@ def importQuiz(request):
         #Coeff
         quest32['coeffQ'+str(i)] = qst.get('coeff')
         #Image à ajouter ?
+        #Insertion dans BDD
+        enregistrementBDDQuestion = Questions(noquiz = (Quiz(noquiz = '32')), evaluation = True, noquestion=i, dureequestion = quest32['dureeQ'+str(i)], coefquestion = quest32['coeffQ'+str(i)], bonnereponsequestion = quest32['bonneRepQ'+str(i)])
+        enregistrementBDDQuestion.save()
+        
 
     #Récupère titre,intitulé et feedback----------------------------------------------
     i2 = 0
