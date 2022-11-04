@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-#from cds.models import Quiz, Questions
+from cds.models import Quiz, Questions
 from django.template import loader
 
 #-------------------------------------
@@ -19,15 +19,15 @@ def importQuiz(request):
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
     root = doc.getroot()
 
-    #try:
+    try:
         #Créer le quiz 32 dans la table quiz => à rendre dynamique plus tard
-        #quiz32 = Quiz(noquiz = '32', evaluation=True, intitulequiz='Questionnaire 32') #Attention au auto_id_quiz=1 => statique
-        #quiz32.save()
-    #except:
-        #erreur = 1+1
+        quiz32 = Quiz(noquiz = '32', evaluation=True, intitulequiz='Questionnaire 32') #Attention au auto_id_quiz=1 => statique
+        quiz32.save()
+    except:
+        erreur = 1+1 #Faut bien mettre qq chose...
 
     #il faut recup la pk en ayant comme condition les contrainte unique!!!!!!!
-    #pkRecherchee = Quiz.objects.filter(noquiz='32',evaluation=True).values('auto_id_quiz')
+    pkRecherchee = Quiz.objects.filter(noquiz='32',evaluation=True).values('auto_id_quiz')
 
     quest32 = {} # À rendre dynamique...
     #Soit envoyer vers BDD plus tard dans le code avec une autre boucle
@@ -46,10 +46,12 @@ def importQuiz(request):
         #Image à ajouter ?
         #Insertion dans BDD
         
-        #enregistrementBDDQuestion = Questions(noquestion=i)
-        #enregistrementBDDQuestion.save()
+        #try:
+            #enregistrementBDDQuestion = Questions(auto_id_quiz=pkRecherchee,noquestion=i, dureequestion=quest32['dureeQ'+str(i)],coefquestion=quest32['coeffQ'+str(i)], bonnereponsequestion=quest32['bonneRepQ'+str(i)])
+            #enregistrementBDDQuestion.save()
+        #except:
+            #erreur2 = 1+1
         
-
     #Récupère titre,intitulé et feedback----------------------------------------------
     i2 = 0
     for elt in root.findall("question"):
@@ -72,4 +74,4 @@ def importQuiz(request):
             iReponse +=1
 
     #return redirect('../cds') 
-    return HttpResponse("yo")
+    return HttpResponse(pkRecherchee)
