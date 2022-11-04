@@ -46,11 +46,11 @@ def importQuiz(request):
         #Image à ajouter ?
         #Insertion dans BDD
         
-        #try:
-            #enregistrementBDDQuestion = Questions(auto_id_quiz=pkRecherchee,noquestion=i, dureequestion=quest32['dureeQ'+str(i)],coefquestion=quest32['coeffQ'+str(i)], bonnereponsequestion=quest32['bonneRepQ'+str(i)])
-            #enregistrementBDDQuestion.save()
-        #except:
-            #erreur2 = 1+1
+        try:
+            enregistrementBDDQuestion = Questions(auto_id_quiz_id=pkRecherchee,noquestion=i, dureequestion=quest32['dureeQ'+str(i)],coefquestion=quest32['coeffQ'+str(i)], bonnereponsequestion=quest32['bonneRepQ'+str(i)])
+            enregistrementBDDQuestion.save()
+        except:
+            erreur2 = 1+1
         
     #Récupère titre,intitulé et feedback----------------------------------------------
     i2 = 0
@@ -74,4 +74,4 @@ def importQuiz(request):
             iReponse +=1
 
     #return redirect('../cds') 
-    return HttpResponse(pkRecherchee)
+    return HttpResponse(Quiz(auto_id_quiz=1))
