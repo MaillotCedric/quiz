@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire notemini="75">
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Sécurité 1</titre>
+    <intitule>Pour prévenir des chutes au droit des trémies et du vide dans les escaliers, il faut installer :</intitule>
+    <listerep>
+      <reponse>Une lisse</reponse>
+      <reponse>Une plinthe</reponse>
+      <reponse>Un garde-corps</reponse>
+      <reponse>Une main courante</reponse>
+    </listerep>
+    <feedback>Différents types d'escaliers</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie 1</titre>
+    <intitule>Comment appelle t on le volume réservé à l'emplacement de l'escalier dans une construction :</intitule>
+    <listerep>
+      <reponse>Une trémie</reponse>
+      <reponse>Une cage d'escalier</reponse>
+      <reponse>Une échappée</reponse>
+      <reponse>Un mur d'échiffre</reponse>
+    </listerep>
+    <feedback>Différents types d'escaliers</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie 2</titre>
+    <intitule>Comment s'appelle la partie horizontale de l'escalier sur laquelle le pied s'appuie pour monter ou descendre :</intitule>
+    <listerep>
+      <reponse>Le nez de marche</reponse>
+      <reponse>La contremarche</reponse>
+      <reponse>La marche</reponse>
+      <reponse>La paillasse</reponse>
+    </listerep>
+    <feedback>Différents types d'escaliers</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie 3</titre>
+    <intitule>La trajectoire suivie par une personne qui monte ou qui descend un escalier, s'appelle :</intitule>
+    <listerep>
+      <reponse>La contremarche</reponse>
+      <reponse>La ligne de foulée</reponse>
+      <reponse>La volée</reponse>
+      <reponse>La cage d'escalier</reponse>
+    </listerep>
+    <feedback>Différents types d'escaliers</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie 4</titre>
+    <intitule>Le mur qui borde et sert d'appui à l'escalier est appelé :</intitule>
+    <listerep>
+      <reponse>Mur de soutien</reponse>
+      <reponse>Mur périphérique</reponse>
+      <reponse>Mur d'échiffre</reponse>
+      <reponse>Mur pignon</reponse>
+    </listerep>
+    <feedback>Différents types d'escaliers</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="2">
+    <titre>Tracé d'une volée</titre>
+    <intitule>Lorsqu'on trace la volée d'un escalier, il faut en priorité :</intitule>
+    <listerep>
+      <reponse>Tracer les girons</reponse>
+      <reponse>Tracer les hauteurs de marche</reponse>
+      <reponse>Déterminer la position des paliers</reponse>
+      <reponse>Tracer avec les cotes brutes</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier droit</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Tracé des contremarches</titre>
+    <intitule>Pour tracer les hauteurs de marche, il faut :</intitule>
+    <listerep>
+      <reponse>Le faire par rapport au trait de niveau</reponse>
+      <reponse>Le faire par les cotes cumulées</reponse>
+      <reponse>Tracer par alternance le giron et la hauteur de marche</reponse>
+      <reponse>Utiliser le fil à plomb</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier droit</feedback>
+  </question>
+  <question bonne="4" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie 5</titre>
+    <intitule>Quelle est la hauteur minimum de l'échappée
+sous un obstacle quelconque, par rapport au-dessus
+de la marche :</intitule>
+    <listerep>
+      <reponse>1,60 m</reponse>
+      <reponse>1,70 m</reponse>
+      <reponse>1,80 m</reponse>
+      <reponse>2,00 m</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier droit</feedback>
+  </question>
+  <question bonne="4" duree="00:00:30.00" coeff="2">
+    <titre>Tracé des marches</titre>
+    <intitule>La répartition des largeurs ou des hauteurs de marche,
+se fait :</intitule>
+    <listerep>
+      <reponse>Par répartition des dimensions</reponse>
+      <reponse>A l'aide d'un niveau</reponse>
+      <reponse>A l'aide d'un fil à plomb et d'une règle</reponse>
+      <reponse>Par cumul</reponse>
+    </listerep>
+    <feedback>Exécuter le tracé de l'escalier droit</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Outillage 1</titre>
+    <intitule>Pour réaliser des coupes droites, en biais
+ou en obliques sur des bois de coffrage,
+combien de scie peut-on utiliser : </intitule>
+    <listerep>
+      <reponse>2</reponse>
+      <reponse>3</reponse>
+      <reponse>4</reponse>
+      <reponse>5</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="1">
+    <titre>Outillage 2</titre>
+    <intitule>La sauterelle c'est :</intitule>
+    <listerep>
+      <reponse>Aussi une fausse équerre</reponse>
+      <reponse>Un outil pour tracer les courbes</reponse>
+      <reponse>Un outil pour tracer plus rapidement un escalier</reponse>
+      <reponse>Un outil de ragréage</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="4" duree="00:00:30.00" coeff="1">
+    <titre>Détail de coffrage</titre>
+    <intitule>Pour asseoir le coffrage de la paillasse de la 2ème volée sur le palier intermédiaire, il faut réaliser un complément de coffrage, appelé :</intitule>
+    <listerep>
+      <reponse>Une chaise</reponse>
+      <reponse>Une échelle</reponse>
+      <reponse>Un échafaudage</reponse>
+      <reponse>Un tabouret</reponse>
+    </listerep>
+    <feedback>Coffrer et ferrailler un escalier droit</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="2">
+    <titre>Etaiement métallique</titre>
+    <intitule>Les chapeaux rampants de la 2ème volée,
+sont réalisés d'après :</intitule>
+    <listerep>
+      <reponse>L'épure de l'escalier tracé sur le contre-plaqué</reponse>
+      <reponse>Le tracé réalisé sur le mur d'échiffre</reponse>
+      <reponse>Les chapeaux réalisés pour la 1ère volée</reponse>
+    </listerep>
+    <feedback>Coffrer et ferrailler un escalier droit</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Accessoires d'armatures</titre>
+    <intitule>Lorsqu'on met en place les armatures d'un escalier à deux volées, il faut :</intitule>
+    <listerep>
+      <reponse>Commencer par le bas en remontant</reponse>
+      <reponse>Poser l'armature de la 2ème volée et ensuite l'armature
+de la 1ère volée</reponse>
+      <reponse>Ferrailler d'abord le palier intermédiaire</reponse>
+      <reponse>Le faire après la mise en place du coffrage des contremarches</reponse>
+    </listerep>
+    <feedback>Coffrer et ferrailler un escalier droit</feedback>
+  </question>
+  <question bonne="4" duree="00:00:30.00" coeff="2">
+    <titre>Bétonnage</titre>
+    <intitule>Lorsqu'on coule un escalier, il faut :</intitule>
+    <listerep>
+      <reponse>Du béton "liquide" en commençant à couler par le haut</reponse>
+      <reponse>Du béton "ferme" en commençant à couler par le haut</reponse>
+      <reponse>Du béton "liquide" en commençant à couler les paliers</reponse>
+      <reponse>Du béton "ferme" en commençant à couler par le bas
+et en utilisant une aiguille vibrante</reponse>
+    </listerep>
+    <feedback>Couler un escalier droit</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Finition des marches</titre>
+    <intitule>Réaliser le bouchardage d'une marche, c'est :</intitule>
+    <listerep>
+      <reponse>Utiliser un marteau boucharde pour dresser le béton</reponse>
+      <reponse>Passer un rouleau en tirant sur une chape fraîchement réalisée</reponse>
+      <reponse>poncer le dessus de la marche quand le béton est durci</reponse>
+      <reponse>Poudrer le béton et le lisser</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions d'un escalier</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Finition des côtés des joues</titre>
+    <intitule>Pour réaliser la finition des côtés de l'escalier laissés bruts de décoffrage, le maçon :</intitule>
+    <listerep>
+      <reponse>Applique du mortier sans précautions particulières</reponse>
+      <reponse>Prépare le support suivant le produit utilisé</reponse>
+      <reponse>Badigeonne le support avec de l'huile de décoffrage</reponse>
+      <reponse>Boucharde la surface du béton</reponse>
+    </listerep>
+    <feedback>Réaliser les finitions d'un escalier</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Méthode de décoffrage</titre>
+    <intitule>Le décoffrage d'un escalier se fait :</intitule>
+    <listerep>
+      <reponse>Le lendemain du coulage</reponse>
+      <reponse>En enlevant les étais d'abord</reponse>
+      <reponse>En desserrant les étais et les coins après durcissement
+du béton</reponse>
+      <reponse>En fonction de la production à réaliser</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="4" duree="00:00:30.00" coeff="1">
+    <titre>Méthode de décoffrage</titre>
+    <intitule>Le décoffrage de l'ensemble de la paillasse
+de la 2ème volée est décollée,
+le maçon retire en priorité :</intitule>
+    <listerep>
+      <reponse>La joue</reponse>
+      <reponse>Les chapeaux rampants</reponse>
+      <reponse>Les étais intermédiaires</reponse>
+      <reponse>Les planches de coffrage</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Position des armatures</titre>
+    <intitule>Dans quel ordre faut-il placer les armatures dans un escalier à deux volées avec un palier intermédiaire :</intitule>
+    <listerep>
+      <reponse>Par l'armature de la 1ère volée</reponse>
+      <reponse>Par l'armature de la 2ème volée</reponse>
+      <reponse>Par l'armature du palier intermédiaire</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Sécurité 2</titre>
+    <intitule>Lorsque le décoffrage de l'escalier est terminé,
+il convient d'installer :</intitule>
+    <listerep>
+      <reponse>Un échafaudage</reponse>
+      <reponse>Une barrière interdisant l'accès</reponse>
+      <reponse>Un garde-corps provisoire</reponse>
+      <reponse>Une échelle</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+</questionnaire>

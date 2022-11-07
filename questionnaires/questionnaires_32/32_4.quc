@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire>
+  <question bonne="4" coeff="1">
+    <intitule>Pour asseoir le coffrage de la paillasse de la 2ème volée sur le palier intermédiaire, il faut réaliser un complément de coffrage appelé :</intitule>
+    <listerep>
+      <reponse>Chaise</reponse>
+      <reponse>Echelle</reponse>
+      <reponse>Echafaudage</reponse>
+      <reponse>Tabouret</reponse>
+    </listerep>
+    <feedback>L'ensemble des éléments en bois du coffrage forment un triangle.</feedback>
+  </question>
+  <question bonne="1" coeff="1">
+    <intitule>Les chapeaux rampants de la 2ème volée sont réalisés d'après :</intitule>
+    <listerep>
+      <reponse>L'épure de l'escalier tracé sur le contre-plaqué</reponse>
+      <reponse>Le tracé réalisé sur le mur d'échiffre</reponse>
+      <reponse>Les chapeaux réalisés pour la 1ère volée</reponse>
+      <reponse>Le plan réalisé par l'architecte</reponse>
+    </listerep>
+    <feedback>L'angle de coupe des extrémités des chapeaux est représenté sur le tracé de l'épure.</feedback>
+  </question>
+  <question bonne="2" coeff="1">
+    <intitule>Le chapeau rampant est positionné en partie basse sur :</intitule>
+    <listerep>
+      <reponse>Des traverses</reponse>
+      <reponse>Des coins</reponse>
+      <reponse>Des étais métalliques</reponse>
+      <reponse>Des chevrons</reponse>
+    </listerep>
+    <feedback>Le réglage au droit du tracé est réalisé par des coins.</feedback>
+  </question>
+  <question bonne="1" coeff="1">
+    <intitule>Pour vérifier l'angle d'inclinaison des chapeaux rampants sur le palier intermédiaires, on trace :</intitule>
+    <listerep>
+      <reponse>Le dessous du coffrage de la paillasse</reponse>
+      <reponse>Le dessous du chapeau rampant</reponse>
+      <reponse>Le dessus du palier intermédiaire</reponse>
+      <reponse>Le dessous du palier d'arrivée</reponse>
+    </listerep>
+    <feedback>Le dessus du chapeau rampant supporte le coffrage de la paillasse.</feedback>
+  </question>
+  <question bonne="4" coeff="1">
+    <intitule>Pour adapter parfaitement l'étai métallique sous le chapeau rampant :</intitule>
+    <listerep>
+      <reponse>On cloue l'embase de l'étai</reponse>
+      <reponse>On règle parfaitement l'aplomb de l'étai</reponse>
+      <reponse>On ajuste le serrage du pas de vis de l'étai</reponse>
+      <reponse>On utilise un coin</reponse>
+    </listerep>
+    <feedback>Les coins sont réalisés dans une chute de chevron.</feedback>
+  </question>
+</questionnaire>

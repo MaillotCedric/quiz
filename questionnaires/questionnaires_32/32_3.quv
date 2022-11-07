@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire notemini="75">
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Matériel de sciage</titre>
+    <intitule>Combien de scie peut-on utiliser pour réaliser des coupes droites, en biais ou en obliques sur des pièces de bois :</intitule>
+    <listerep>
+      <reponse>2</reponse>
+      <reponse>3</reponse>
+      <reponse>4</reponse>
+      <reponse>5</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="4" duree="00:00:30.00" coeff="2">
+    <titre>Support de sciage</titre>
+    <intitule>Pour réaliser des coupes sur des bois de coffrage dans de bonnes conditions, on utilise comme support :</intitule>
+    <listerep>
+      <reponse>Le dessus de la caisse à outils</reponse>
+      <reponse>Le dessus d'un mur en maçonnerie</reponse>
+      <reponse>Le dessus d'une palette de briques ou d'agglomérés</reponse>
+      <reponse>Un établi stable et adapté</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Le contre-plaqué 1</titre>
+    <intitule>Quel est l'inconvénient du contre-plaqué dans
+l'utilisation du coffrage :</intitule>
+    <listerep>
+      <reponse>Résistant au coffrage</reponse>
+      <reponse>Prix de revient élevé et s'abîme rapidement dans le cas 
+de clouage et déclouage fréquent</reponse>
+      <reponse>Mauvaise étanchéité au droit de la peau du coffrage</reponse>
+      <reponse>Facilité de réalisation des coffrages</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Le contre-plaqué 2</titre>
+    <intitule>Dans quel cas utilise-t-on essentiellement le contre-plaqué bakélisé :</intitule>
+    <listerep>
+      <reponse>Pour fabriquer du béton</reponse>
+      <reponse>Quand on veut un parement très soigné, brut de décoffrage</reponse>
+      <reponse>Pour protéger des risques de salissures</reponse>
+      <reponse>C'est plus économique qu'un coffrage réalisé avec des planches de coffrage</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Tracé des angles</titre>
+    <intitule>Pour réaliser des coupes en faux équerrage, le maçon trace l'angle de coupe à l'aide :</intitule>
+    <listerep>
+      <reponse>D'un rapporteur</reponse>
+      <reponse>D'un compas</reponse>
+      <reponse>D'une fausse équerre</reponse>
+      <reponse>D'une équerre à talon</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Outil de coffrage</titre>
+    <intitule>Une fausse équerre :</intitule>
+    <listerep>
+      <reponse>Est une équerre qui n'est plus juste</reponse>
+      <reponse>Est appelée aussi "Sauterelle"</reponse>
+      <reponse>S'utilise pour tracer les contremarches</reponse>
+      <reponse>Pour positionner les pointes sur les coffrages</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="2">
+    <titre>Sécurité 1</titre>
+    <intitule>Pour réaliser des coupes dans de bonnes conditions avec du matériel électroportatif, il est nécessaire :</intitule>
+    <listerep>
+      <reponse>Qu'il réponde aux normes de sécurité en vigueur</reponse>
+      <reponse>Qu'il soit de bonne marque de fabrication</reponse>
+      <reponse>Qu'il soit raccordé électriquement à du 48 volts</reponse>
+      <reponse>Qu'il soit raccordé électriquement à du 24 volts</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Sécurité 2</titre>
+    <intitule>Avant de régler l'angle de coupe sur du matériel de
+sciage électroportatif, quelle précaution faut-il prendre :</intitule>
+    <listerep>
+      <reponse>Tracer l'angle sur la pièce de bois en rouge</reponse>
+      <reponse>Débrancher l'alimentation de la scie, raccordée à la prise électrique</reponse>
+      <reponse>Réaliser le réglage de l'angle de coupe au sol</reponse>
+      <reponse>Avertir le chef d'équipe</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Positionnement de sciage</titre>
+    <intitule>Pour réaliser une coupe à la scie circulaire électroportative, le maçon la positionne sur le tracé :</intitule>
+    <listerep>
+      <reponse>En soulevant la cape de protection</reponse>
+      <reponse>Au moyen du guide situé à l'avant de l'outil</reponse>
+      <reponse>En se faisant aider par son chef d'équipe</reponse>
+      <reponse>Sans précautions particulières</reponse>
+    </listerep>
+    <feedback>Exécuter des coupes</feedback>
+  </question>
+</questionnaire>

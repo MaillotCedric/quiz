@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire>
+  <question bonne="2" coeff="1">
+    <intitule>Le tracé d'un escalier se fait par rapport :</intitule>
+    <listerep>
+      <reponse>Au brut de coulage</reponse>
+      <reponse>Au fini des marches</reponse>
+      <reponse>Au droit des planches de coffrage</reponse>
+      <reponse>Il n'y a pas de méthode particulière</reponse>
+    </listerep>
+    <feedback>Il est recommandé de tracer l'escalier suivant sa finition.</feedback>
+  </question>
+  <question bonne="4" coeff="1">
+    <intitule>Quelle est la hauteur minimum de l'échappée sous un obstacle quelconque par rapport au-dessus
+de la marche :</intitule>
+    <listerep>
+      <reponse>1,60m</reponse>
+      <reponse>1,70m</reponse>
+      <reponse>1,80m</reponse>
+      <reponse>2,00m</reponse>
+    </listerep>
+    <feedback>La dimension minimale de hauteur libre d'un escalier
+par rapport à un obstacle est comprise
+entre 1,80m et 2,00m.</feedback>
+  </question>
+  <question bonne="3" coeff="1">
+    <intitule>Avant de tracer un escalier les ouvriers prennent quelles mesures de sécurité :</intitule>
+    <listerep>
+      <reponse>Ils montent un échafaudage réglementaire</reponse>
+      <reponse>Ils bouchent la trémie</reponse>
+      <reponse>Ils protègent les extrémités des aciers en attentes</reponse>
+      <reponse>Ils ne prennent aucune mesures particulières de sécurité</reponse>
+    </listerep>
+    <feedback>Des aciers ont été disposés en attente lors du coulage, les ouvriers doivent s'assurer que leurs extrémités seront protégées.</feedback>
+  </question>
+  <question bonne="4" coeff="1">
+    <intitule>La répartition des largeurs de marche ou des hauteurs de marche se fait :</intitule>
+    <listerep>
+      <reponse>Par répétition des dimensions</reponse>
+      <reponse>A l'aide d'un niveau</reponse>
+      <reponse>A l'aide d'un fil à plomb et d'une règle</reponse>
+      <reponse>Par cumul</reponse>
+    </listerep>
+    <feedback>Les tracés doivent être très précis, il faut éviter les mesures à répétition.</feedback>
+  </question>
+  <question bonne="3" coeff="1">
+    <intitule>Pour permettre le coffrage et le décoffrage de la paillasse de la 1ère volée il est nécessaire de commencer :</intitule>
+    <listerep>
+      <reponse>47cm à l'arrière de l'alignement de la 2ème contremarche</reponse>
+      <reponse>20cm environ à l'arrière de l'alignement de la 2ème contremarche</reponse>
+      <reponse>10cm environ à l'arrière de l'alignement de la 2ème contremarche</reponse>
+      <reponse>A l'angle formé par le sol et la paillasse</reponse>
+    </listerep>
+    <feedback>47cm et 20cm formes un bloc de béton inutile et inesthétique et l'angle formé par le sol et le dessous de la paillasse bloquerai le coffrage.</feedback>
+  </question>
+</questionnaire>
