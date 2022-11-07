@@ -7,5 +7,11 @@ class Role(models.Model):
     class Meta:
         db_table = 'role'
 
+class Metier(models.Model):
+    codeMetier = models.CharField(primary_key=True, max_length=50)
+    nomMetier = models.CharField(max_length=50, blank=True, null=True)
+    class Meta:
+        db_table = 'metier'
+
 class Utilisateur(AbstractUser):
     pass
