@@ -100,3 +100,17 @@ def importQuiz(request):
 
     #return redirect('../cds') 
     return HttpResponse(Quiz(auto_id_quiz=1))
+
+def activation(request):
+    activationQuiz = Quiz.objects.get(noquiz='32',evaluation=True)
+    activationQuiz.actif = True
+    activationQuiz.save()
+    
+    return HttpResponse(activationQuiz)
+
+def desactivation(request):
+    desactivationQuiz = Quiz.objects.get(noquiz='32',evaluation=True)
+    desactivationQuiz.actif = False
+    desactivationQuiz.save()
+
+    return HttpResponse(desactivationQuiz)
