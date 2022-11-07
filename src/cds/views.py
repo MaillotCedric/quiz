@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from cds.models import Quiz, Questions
+from cds.models import Quiz, Questions, PropositionsReponses
 from django.template import loader
 
 #-------------------------------------
@@ -46,7 +46,7 @@ def importQuiz(request):
         #Image à ajouter ?
         #Insertion dans BDD
         
-        #try:
+        #try:auto_id_quiz_id
         #    enregistrementBDDQuestion = Questions(auto_id_quiz_id=pkRecherchee,noquestion=i, dureequestion=quest32['dureeQ'+str(i)],coefquestion=quest32['coeffQ'+str(i)], bonnereponsequestion=quest32['bonneRepQ'+str(i)])
         #    enregistrementBDDQuestion.save()
         #except:
@@ -88,6 +88,14 @@ def importQuiz(request):
         for propRep in listeReponse:
             #print(propRep.text,"reponse=>",iReponse,"question",iQuestion)
             quest32['propRep'+str(iReponse)+'Q'+str(iQuestion)] = propRep.text
+            #Recup le bon id question
+            idQuestionRecherchee = Questions.objects.filter(noquestion = str(iQuestion), auto_id_quiz_id__in = pkRecherchee).values('auto_id_question')
+            #Enregistrement dans BDD
+            try:
+                enregistrementBDDReponsesQuest = PropositionsReponses(nopropositionrep = iReponse, auto_id_question_id = idQuestionRecherchee, intitulepropositionreponse = quest32['propRep'+str(iReponse)+'Q'+str(iQuestion)])
+                enregistrementBDDReponsesQuest.save()
+            except:
+                erreur4= 1+1
             iReponse +=1
 
     #return redirect('../cds') 
