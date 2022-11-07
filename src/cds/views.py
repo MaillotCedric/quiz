@@ -46,11 +46,11 @@ def importQuiz(request):
         #Image à ajouter ?
         #Insertion dans BDD
         
-        try:
-            enregistrementBDDQuestion = Questions(auto_id_quiz_id=pkRecherchee,noquestion=i, dureequestion=quest32['dureeQ'+str(i)],coefquestion=quest32['coeffQ'+str(i)], bonnereponsequestion=quest32['bonneRepQ'+str(i)])
-            enregistrementBDDQuestion.save()
-        except:
-            erreur2 = 1+1
+        #try:
+        #    enregistrementBDDQuestion = Questions(auto_id_quiz_id=pkRecherchee,noquestion=i, dureequestion=quest32['dureeQ'+str(i)],coefquestion=quest32['coeffQ'+str(i)], bonnereponsequestion=quest32['bonneRepQ'+str(i)])
+        #    enregistrementBDDQuestion.save()
+        #except:
+        #    erreur2 = 1+1
         
     #Récupère titre,intitulé et feedback----------------------------------------------
     i2 = 0
@@ -62,6 +62,23 @@ def importQuiz(request):
         quest32['intituleQ'+str(i2)] = elt.find('intitule').text
         #feedback
         quest32['feedbackQ'+str(i2)] = elt.find('feedback').text
+
+        #try:
+        #pkRecherchee2 = Questions.objects.filter(auto_id_quiz_id=pkRecherchee, noquestion = i2).values('auto_id_question')
+        #enregistrementBDDQuestion2 = Questions(auto_id_question = pkRecherchee2, titrequestion = quest32['titreQ'+str(i2)], intitulequestion = quest32['intituleQ'+str(i2)], feedbackquestion = quest32['feedbackQ'+str(i2)])
+        #enregistrementBDDQuestion2.save()
+        #except:
+        #    erreur3 = 1+1
+
+    i3=0
+    try:
+        for qst in root: #Juste pour boucler le bon nombre de fois peut être changé si probleme, len(qst) ?
+            i3 += 1
+            enregistrementBDDQuestionTotal = Questions(auto_id_quiz_id=pkRecherchee,noquestion=i3, dureequestion=quest32['dureeQ'+str(i3)],coefquestion=quest32['coeffQ'+str(i3)], bonnereponsequestion=quest32['bonneRepQ'+str(i3)], titrequestion = quest32['titreQ'+str(i3)], intitulequestion = quest32['intituleQ'+str(i3)], feedbackquestion = quest32['feedbackQ'+str(i3)])
+            enregistrementBDDQuestionTotal.save()
+    except:
+        erreur3 = 1+1
+
 
     #Récupère les propositions de reponses-----------------------------------------------
     iQuestion = 0
