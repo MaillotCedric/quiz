@@ -26,5 +26,5 @@ class Utilisateur(AbstractUser):
     codeRole = models.ForeignKey(Role, models.DO_NOTHING, db_column='codeRole', null=False, default="admin")
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=["matricule"], name='unique matricule')
+            models.UniqueConstraint(fields=["matricule"], name="unique matricule")
         ]
