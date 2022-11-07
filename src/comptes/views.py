@@ -28,4 +28,11 @@ def index(request):
     # cm = Metier.objects.get(pk="dev_web")
     # cr = Role.objects.get(pk="chef")
     # Utilisateur.objects.create(username="jean", password=mot_de_passe, email="jean@example.com", is_superuser=True, is_staff=True, matricule="AAAB", codeSecteur=cs, codeMetier=cm, codeRole=cr)
+    # --------------------------- Création collaborateurs RD ---------
+    # mot_de_passe = make_password("azerty")
+    # cs = Secteur.objects.get(pk="RD")
+    # cm = Metier.objects.get(pk="dev_web")
+    # cr = Role.objects.get(pk="collab")
+    # Utilisateur.objects.create(username="jacques", password=mot_de_passe, email="jacques@example.com", matricule="AAAC", codeSecteur=cs, codeMetier=cm, codeRole=cr)
+    # Utilisateur.objects.create(username="marie", password=mot_de_passe, email="marie@example.com", matricule="AAAD", codeSecteur=cs, codeMetier=cm, codeRole=cr)
     return render(request, "login.html", {})
