@@ -35,4 +35,10 @@ def index(request):
     # cr = Role.objects.get(pk="collab")
     # Utilisateur.objects.create(username="jacques", password=mot_de_passe, email="jacques@example.com", matricule="AAAC", codeSecteur=cs, codeMetier=cm, codeRole=cr)
     # Utilisateur.objects.create(username="marie", password=mot_de_passe, email="marie@example.com", matricule="AAAD", codeSecteur=cs, codeMetier=cm, codeRole=cr)
+    # ------------------- test contrainte d'unicité matricule -------
+    # mot_de_passe = make_password("azerty")
+    # cs = Secteur.objects.get(pk="RD")
+    # cm = Metier.objects.get(pk="dev_web")
+    # cr = Role.objects.get(pk="collab")
+    # Utilisateur.objects.create(username="laurent", password=mot_de_passe, email="laurent@example.com", matricule="AAAC", codeSecteur=cs, codeMetier=cm, codeRole=cr)
     return render(request, "login.html", {})
