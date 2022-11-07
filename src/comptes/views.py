@@ -22,4 +22,10 @@ def index(request):
     # cm = Metier.objects.get(pk="resp_rh")
     # cr = Role.objects.get(pk="admin")
     # Utilisateur.objects.create(username="admin", password=mot_de_passe, email="admin@example.com", is_superuser=True, is_staff=True, matricule="AAAA", codeSecteur=cs, codeMetier=cm, codeRole=cr)
+    # --------------------------- Création chef secteur RD ----------
+    # mot_de_passe = make_password("azerty")
+    # cs = Secteur.objects.get(pk="RD")
+    # cm = Metier.objects.get(pk="dev_web")
+    # cr = Role.objects.get(pk="chef")
+    # Utilisateur.objects.create(username="jean", password=mot_de_passe, email="jean@example.com", is_superuser=True, is_staff=True, matricule="AAAB", codeSecteur=cs, codeMetier=cm, codeRole=cr)
     return render(request, "login.html", {})
