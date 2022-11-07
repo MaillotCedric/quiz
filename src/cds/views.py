@@ -11,8 +11,11 @@ import os
 # Create your views here.
 
 def index(request):
-
-    return render (request, "cds/homeCDS.html")
+    quiz32 = Quiz.objects.get(noquiz ='32')
+    context = {
+        'quiz32' : quiz32 
+    }
+    return render (request, "cds/homeCDS.html", context=context)
 
 def importQuiz(request):
 
@@ -99,18 +102,18 @@ def importQuiz(request):
             iReponse +=1
 
     #return redirect('../cds') 
-    return HttpResponse(Quiz(auto_id_quiz=1))
+    return redirect ('index')
 
 def activation(request):
     activationQuiz = Quiz.objects.get(noquiz='32',evaluation=True)
     activationQuiz.actif = True
     activationQuiz.save()
     
-    return HttpResponse(activationQuiz)
+    return redirect ('index')
 
 def desactivation(request):
     desactivationQuiz = Quiz.objects.get(noquiz='32',evaluation=True)
     desactivationQuiz.actif = False
     desactivationQuiz.save()
 
-    return HttpResponse(desactivationQuiz)
+    return redirect ('index')
