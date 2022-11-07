@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.db.models import Q
 
 class Role(models.Model):
     codeRole = models.CharField(primary_key=True, max_length=50)
@@ -26,5 +27,6 @@ class Utilisateur(AbstractUser):
     codeRole = models.ForeignKey(Role, models.DO_NOTHING, db_column='codeRole', null=False, default="admin")
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=["matricule"], name="unique matricule")
+            models.UniqueConstraint(fields=["matricule"], name="unique matricule"),
+            models.UniqueConstraint(fields=["codeRole", "codeSecteur"], condition=Q(codeRole="chef"), name="unique chef de secteur")
         ]
