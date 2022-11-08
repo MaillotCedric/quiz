@@ -63,8 +63,8 @@ def login_user(request):
 
             if role == "chef":
                 return redirect("index_home_cds", id_chef = user.id)
-            else:
-                return render(request, "login.html", {})
+            elif role == "collab":
+                return redirect("home_collab", id_collaborateur = user.id)
         else:
             messages.success(request, ("login erreur"))
             return render(request, "login.html", {})
