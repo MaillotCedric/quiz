@@ -7,6 +7,7 @@ from cds.models import Questions, PropositionsReponses, Quiz
 from django.template import loader
 
 import xml.etree.ElementTree as etree
+import os
 
 def index(request):
 
@@ -38,7 +39,11 @@ def quiz(request):
         #feedback
         quest32['feedbackQ'+str(i2)] = elt.find('feedback').text
     questions = quest32
+    results = open("collab/static/quiz.js", "r")
+    test = results.read
     context={
-        'questions' : questions
+        'questions' : questions,
+        'resultat' : test
     }
+    
     return render (request, "collabMain.html", context=context)
