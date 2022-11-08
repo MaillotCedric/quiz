@@ -4,12 +4,10 @@ from cds.models import Quiz, Questions, PropositionsReponses
 from django.template import loader
 
 #-------------------------------------
-
 import xml.etree.ElementTree as etree
 import os
 
 # Create your views here.
-
 def index(request):
     quiz32 = Quiz.objects.get(noquiz ='32')
     context = {
@@ -117,3 +115,34 @@ def desactivation(request):
     desactivationQuiz.save()
 
     return redirect ('index')
+
+def quiz(request):
+    doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
+    root = doc.getroot()
+    quest32={}
+    pkRecherchee = Quiz.objects.filter(noquiz='32',evaluation=True).values('auto_id_quiz')
+    #------------------------------------------
+    iQuestion = 0
+    for listeReponse in root.findall('.//listerep'):
+        iQuestion +=1
+        iReponse = 1
+        for propRep in listeReponse:
+            #print(propRep.text,"reponse=>",iReponse,"question",iQuestion)
+            quest32['propRep'+str(iReponse)+'Q'+str(iQuestion)] = propRep.text
+            #Enregistrement dans BDD
+            iReponse +=1
+    #------------------------------------------
+    i2 = 0
+    for elt in root.findall("question"):
+        i2+=1
+        #titre
+        quest32['titreQ'+str(i2)] = elt.find('titre').text
+        #intitule
+        quest32['intituleQ'+str(i2)] = elt.find('intitule').text
+        #feedback
+        quest32['feedbackQ'+str(i2)] = elt.find('feedback').text
+    questions = quest32
+    context={
+        'questions' : questions
+    }
+    return render (request, "cds/collabMain.html", context=context)

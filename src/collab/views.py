@@ -3,9 +3,9 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render
 from django.http import HttpResponse
-#from collab.models import Questions
+from cds.models import Questions, PropositionsReponses, Quiz
+from django.template import loader
 
 def index(request):
-    #metierTest = Metier(codemetier = 'JPRO', nommetier = "Joueur Pro")
-    #metierTest.save()
-    return HttpResponse("Metier.objects.all()")
+
+    return render(request, "collabMain.html")
