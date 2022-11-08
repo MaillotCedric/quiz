@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'quiz.css' %}">
+</head>
+<body>
+
+    <h1>Quiiiiiizcolab</h1>
+
+
+    <section>
+        {% if questions.titreQ1 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ1 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ1 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q1" id="propRep1Q1">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q1 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q1" id="propRep2Q1">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q1 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q1 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q1" id="propRep3Q1">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q1 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q1 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q1" id="propRep4Q1">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q1 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q1 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q1" id="propRep5Q1">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q1 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ2 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ2 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ2 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q2" id="propRep1Q2">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q2 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q2" id="propRep2Q2">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q2 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q2 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q2" id="propRep3Q2">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q2 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q2 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q2" id="propRep4Q2">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q2 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q2 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q2" id="propRep5Q2">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q2 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ3 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ3 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ3 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q3" id="propRep1Q3">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q3 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q3" id="propRep2Q3">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q3 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q3 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q3" id="propRep3Q3">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q3 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q3 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q3" id="propRep4Q3">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q3 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q3 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q3" id="propRep5Q3">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q3 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ4 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ4 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ4 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q4" id="propRep1Q4">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q4 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q4" id="propRep2Q4">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q4 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q4 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q4" id="propRep3Q4">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q4 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q4 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q4" id="propRep4Q4">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q4 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q4 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q4" id="propRep5Q4">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q4 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ5 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ5 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ5 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q5" id="propRep1Q5">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q5 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q5" id="propRep2Q5">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q5 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q5 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q5" id="propRep3Q5">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q5 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q5 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q5" id="propRep4Q5">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q5 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q5 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q5" id="propRep5Q5">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q5 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ6 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ6 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ6 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q6" id="propRep1Q6">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q6 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q6" id="propRep2Q6">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q6 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q6 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q6" id="propRep3Q6">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q6 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q6 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q6" id="propRep4Q6">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q6 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q6 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q6" id="propRep5Q6">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q6 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ7 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ7 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ7 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q7" id="propRep1Q7">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q7 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q7" id="propRep2Q7">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q7 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q7 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q7" id="propRep3Q7">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q7 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q7 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q7" id="propRep4Q7">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q7 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q7 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q7" id="propRep5Q7">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q7 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ8 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ8 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ8 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q8" id="propRep1Q8">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q8 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q8" id="propRep2Q8">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q8 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q8 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q8" id="propRep3Q8">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q8 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q8 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q8" id="propRep4Q8">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q8 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q8 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q8" id="propRep5Q8">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q8 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ9 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ9 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ9 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q9" id="propRep1Q9">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q9 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q9" id="propRep2Q9">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q9 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q9 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q9" id="propRep3Q9">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q9 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q9 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q9" id="propRep4Q9">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q9 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q9 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q9" id="propRep5Q9">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q9 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ10 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ10 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ10 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q10" id="propRep1Q10">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q10 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q10" id="propRep2Q10">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q10 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q10 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q10" id="propRep3Q10">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q10 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q10 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q10" id="propRep4Q10">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q10 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q10 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q10" id="propRep5Q10">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q10 }}
+                        </label>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ11 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ11 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ11 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q11" id="propRep1Q11">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q11 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q11" id="propRep2Q11">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q11 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q11 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q11" id="propRep3Q11">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q11 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q11 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q11" id="propRep4Q11">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q11 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q11 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q11" id="propRep5Q11">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q11 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ12 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ12 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ12 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q12" id="propRep1Q12">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q12 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q12" id="propRep2Q12">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q12 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q12 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q12" id="propRep3Q12">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q12 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q12 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q12" id="propRep4Q12">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q12 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q12 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q12" id="propRep5Q12">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q12 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ13 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ13 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ13 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q13" id="propRep1Q13">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q13 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q13" id="propRep2Q13">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q13 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q13 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q13" id="propRep3Q13">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q13 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q13 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q13" id="propRep4Q13">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q13 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q13 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q13" id="propRep5Q13">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q13 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ14 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ14 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ14 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q14" id="propRep1Q14">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q14 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q14" id="propRep2Q14">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q14 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q14 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q14" id="propRep3Q14">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q14 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q14 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q14" id="propRep4Q14">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q14 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q14 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q14" id="propRep5Q14">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q14 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ15 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ15 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ15 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q15" id="propRep1Q15">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q15 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q15" id="propRep2Q15">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q15 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q15 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q15" id="propRep3Q15">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q15 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q15 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q15" id="propRep4Q15">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q15 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q15 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q15" id="propRep5Q15">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q15 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ16 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ16 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ16 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q16" id="propRep1Q16">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q16 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q16" id="propRep2Q16">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q16 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q16 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q16" id="propRep3Q16">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q16 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q16 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q16" id="propRep4Q16">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q16 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q16 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q16" id="propRep5Q16">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q16 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ17 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ17 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ17 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q17" id="propRep1Q17">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q17 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q17" id="propRep2Q17">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q17 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q17 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q17" id="propRep3Q17">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q17 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q17 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q17" id="propRep4Q17">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q17 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q17 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q17" id="propRep5Q17">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q17 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ18 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ18 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ18 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q18" id="propRep1Q18">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q18 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q18" id="propRep2Q18">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q18 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q18 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q18" id="propRep3Q18">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q18 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q18 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q18" id="propRep4Q18">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q18 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q18 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q18" id="propRep5Q18">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q18 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ19 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ19 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ19 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q19" id="propRep1Q19">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q19 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q19" id="propRep2Q19">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q19 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q19 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q19" id="propRep3Q19">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q19 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q19 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q19" id="propRep4Q19">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q19 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q19 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q19" id="propRep5Q19">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q19 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ20 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ20 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ20 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q20" id="propRep1Q20">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q20 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q20" id="propRep2Q20">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q20 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q20 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q20" id="propRep3Q20">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q20 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q20 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q20" id="propRep4Q20">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q20 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q20 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q20" id="propRep5Q20">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q20 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ21 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ21 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ21 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q21" id="propRep1Q21">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q21 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q21" id="propRep2Q21">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q21 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q21 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q21" id="propRep3Q21">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q21 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q21 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q21" id="propRep4Q21">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q21 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q21 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q21" id="propRep5Q21">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q21 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+
+        {% if questions.titreQ22 %}
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ questions.titreQ22 }}</div>
+            <div class="card-body">
+            <h5 class="card-title">{{ questions.intituleQ22 }}</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q22" id="propRep1Q22">
+                <label class="form-check-label">
+                    {{ questions.propRep1Q22 }}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q22" id="propRep2Q22">
+                <label class="form-check-label">
+                    {{ questions.propRep2Q22 }}
+                </label>
+            </div>
+                {% if questions.propRep3Q22 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q22" id="propRep3Q22">
+                        <label class="form-check-label">
+                            {{ questions.propRep3Q22 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep4Q22 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q22" id="propRep4Q22">
+                        <label class="form-check-label">
+                            {{ questions.propRep4Q22 }}
+                        </label>
+                    </div>
+                {% endif %}
+
+                {% if questions.propRep5Q22 %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Q22" id="propRep5Q22">
+                        <label class="form-check-label">
+                            {{ questions.propRep5Q22 }}
+                        </label>
+                    </div>
+                {% endif %}
+                
+            </div>
+        </div>
+        {% endif %}
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
