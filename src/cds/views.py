@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from cds.models import Quiz, Questions
 from django.template import loader
+from comptes.models import Utilisateur
 
 #-------------------------------------
 
@@ -10,9 +11,23 @@ import os
 
 # Create your views here.
 
-def index(request):
-
-    return render (request, "cds/homeCDS.html")
+def index(request, id_chef):
+    if request.user.is_authenticated: # l'utilisateur est bien connecté
+        chef = Utilisateur.objects.get(pk=id_chef)
+        codeSecteur = chef.codeSecteur
+        collaborateurs = Utilisateur.objects.filter(codeSecteur=codeSecteur).exclude(codeRole="chef") # collaborateurs du secteur
+        if chef.codeRole.pk == "chef": # l'utilisateur est bien un chef
+            if request.user.id == int(id_chef): # on empêche un chef de secteur d'aller sur une autre page de chef de secteur
+                return render(request, "cds/homeCDS.html", {
+                    "chef": chef,
+                    "collaborateurs": collaborateurs
+                })
+            else:
+                return redirect("index_home_cds", id_chef = request.user.id) # le chef de secteur est redirigé vers sa page d'acceuil dédiée
+        else:
+            return redirect("login")
+    else:
+        return redirect("login")
 
 def importQuiz(request):
 

@@ -59,9 +59,12 @@ def login_user(request):
         if user is not None:
             login(request, user)
             messages.success(request, ("login success"))
-            return render(request, "login.html", {
-                "role": user.codeRole.pk
-            })
+            role = user.codeRole.pk
+
+            if role == "chef":
+                return redirect("index_home_cds", id_chef = user.id)
+            else:
+                return render(request, "login.html", {})
         else:
             messages.success(request, ("login erreur"))
             return render(request, "login.html", {})
