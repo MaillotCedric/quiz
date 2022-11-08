@@ -20,7 +20,9 @@
                     <img src="{% static 'quiz_logo.png' %}" alt="Logo" id="logo" class="d-inline-block align-text-top">
                 </a>
                 <!-- <a href="#" class="text-decoration-none link-dark fs-1 fw-bold">Quiz</a> -->
-                <!-- <a href="{% url 'login' %}" class="text-decoration-none link-dark fs-5 fw-bold">Connexion</a> -->
+                {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}" class="text-decoration-none link-dark fs-5 fw-bold">Déconnexion</a>
+                {% endif %}
             </div>
         </nav>
         {% block contenu %}

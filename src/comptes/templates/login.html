@@ -1,17 +1,26 @@
 {% extends 'base.html' %}
 
 {% block contenu %}
+<!-- {% if user.is_authenticated %}
+    {{ role }}
+{% endif %} -->
+<!-- {% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %} -->
 <div class="container text-center pt-3">
     <div class="row justify-content-md-center">
         <div class="col col-lg-6">
             <form action="" method="POST">
+                {% csrf_token %}
                 <div class="mb-3">
                     <label for="usernameInput" class="form-label d-flex fw-bold">Nom d'utilisateur</label>
-                    <input type="text" class="form-control" id="usernameInput">
+                    <input type="text" class="form-control" id="usernameInput" name="username">
                 </div>
                 <div class="mb-3">
                     <label for="passwordInput" class="form-label d-flex fw-bold">Mot de passe</label>
-                    <input type="password" class="form-control" id="passwordInput">
+                    <input type="password" class="form-control" id="passwordInput" name="password">
                 </div>
                 <button type="submit" class="btn btn-primary d-flex">Connexion</button>
             </form>

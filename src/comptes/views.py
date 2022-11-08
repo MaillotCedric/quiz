@@ -52,4 +52,23 @@ from django.contrib import messages
     # return render(request, "login.html", {})
 
 def login_user(request):
-    return render(request, "login.html", {})
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            messages.success(request, ("login success"))
+            return render(request, "login.html", {
+                "role": user.codeRole.pk
+            })
+        else:
+            messages.success(request, ("login erreur"))
+            return render(request, "login.html", {})
+    else:
+        return render(request, "login.html", {})
+
+def logout_user(request):
+    logout(request)
+    messages.success(request, ("logged out"))
+    return redirect("login")
