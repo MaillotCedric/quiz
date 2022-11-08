@@ -13,7 +13,10 @@ import os
 
 def index(request, id_chef):
     if request.user.is_authenticated: # l'utilisateur est bien connecté
-        chef = Utilisateur.objects.get(pk=id_chef)
+        try: # on vérifie que l'id passé dans l'URL existe
+            chef = Utilisateur.objects.get(pk=id_chef)
+        except: # l'id passé n'existe pas
+            return redirect("index_home_cds", id_chef = request.user.id)
         codeSecteur = chef.codeSecteur
         collaborateurs = Utilisateur.objects.filter(codeSecteur=codeSecteur).exclude(codeRole="chef") # collaborateurs du secteur
         if chef.codeRole.pk == "chef": # l'utilisateur est bien un chef
@@ -25,9 +28,9 @@ def index(request, id_chef):
             else:
                 return redirect("index_home_cds", id_chef = request.user.id) # le chef de secteur est redirigé vers sa page d'acceuil dédiée
         else:
-            return redirect("login")
+            return redirect("index_home_cds", id_chef = request.user.id)
     else:
-        return redirect("login")
+        return redirect("index_home_cds", id_chef = request.user.id)
 
 def importQuiz(request):
 
