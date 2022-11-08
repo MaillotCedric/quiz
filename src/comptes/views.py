@@ -1,11 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 # from comptes.models import Role
 # from comptes.models import Metier
 # from comptes.models import Secteur
 # from comptes.models import Utilisateur
 # from django.contrib.auth.hashers import make_password
 
-def index(request):
+# def index(request):
     # Role.objects.create(codeRole="admin", nomRole="administrateur")
     # Role.objects.create(codeRole="chef", nomRole="chef de secteur")
     # Role.objects.create(codeRole="collab", nomRole="collaborateur")
@@ -47,4 +49,7 @@ def index(request):
     # cm = Metier.objects.get(pk="dev_web")
     # cr = Role.objects.get(pk="chef")
     # Utilisateur.objects.create(username="paul", password=mot_de_passe, email="paul@example.com", matricule="AAAE", codeSecteur=cs, codeMetier=cm, codeRole=cr)
+    # return render(request, "login.html", {})
+
+def login_user(request):
     return render(request, "login.html", {})

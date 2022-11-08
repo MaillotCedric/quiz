@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
-    </head>
-    <body>
-        <h1>Login</h1>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block contenu %}
+<div class="container text-center pt-3">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-6">
+            <form action="" method="POST">
+                <div class="mb-3">
+                    <label for="usernameInput" class="form-label d-flex fw-bold">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="usernameInput">
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label d-flex fw-bold">Mot de passe</label>
+                    <input type="password" class="form-control" id="passwordInput">
+                </div>
+                <button type="submit" class="btn btn-primary d-flex">Connexion</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %} 
