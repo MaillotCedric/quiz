@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'collab',
-    'cds'
+    'cds',
+    'comptes'
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'quiz',
         'USER' : 'postgres',
-        'PASSWORD' : 'azerty',
+        'PASSWORD' : '0000',
         'HOST' : '127.0.0.1',
         'PORT' : '5432',
     }
@@ -127,3 +128,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'comptes.Utilisateur'
