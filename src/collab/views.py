@@ -22,7 +22,7 @@ def index(request, id_collaborateur):
                 })
             else:
                 return redirect("home_collab", id_collaborateur = request.user.id) # le collaborateur est redirigé vers sa page d'acceuil dédiée
-        else:
-            return redirect("home_collab", id_collaborateur = request.user.id)
+        else: # ce n'est pas un collaborateur, c'est donc un chef
+            return redirect("index_home_cds", id_chef = request.user.id) # on renvoie le collaborateur sur sa page d'accueil
     else:
-        return redirect("home_collab", id_collaborateur = request.user.id)
+        return redirect("login")

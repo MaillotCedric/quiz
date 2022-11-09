@@ -27,10 +27,10 @@ def index(request, id_chef):
                 })
             else:
                 return redirect("index_home_cds", id_chef = request.user.id) # le chef de secteur est redirigé vers sa page d'acceuil dédiée
-        else:
-            return redirect("index_home_cds", id_chef = request.user.id)
+        else: # ce n'est pas un chef, c'est donc un collaborateur
+            return redirect("home_collab", id_collaborateur = request.user.id) # on renvoie le chef sur sa page d'accueil
     else:
-        return redirect("index_home_cds", id_chef = request.user.id)
+        return redirect("login")
 
 def importQuiz(request):
 
