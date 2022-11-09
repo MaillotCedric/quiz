@@ -18,3 +18,11 @@ class ReponsesChoisies(models.Model):
 
     class Meta:
         db_table='reponseschoisies'
+
+class ReponsesChoisiesv2(models.Model):
+    auto_id_reponse_choisie2 = models.AutoField(primary_key=True)
+    noquestion = models.IntegerField()
+    noreponsechoisie = models.IntegerField()
+
+    class Meta:
+        db_table='reponseschoisiesv2'

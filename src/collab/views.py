@@ -8,7 +8,7 @@ from django.template import loader
 import xml.etree.ElementTree as etree
 import os
 
-from .forms import TestForm,QuizForm
+from .forms import TestForm,QuizForm,QuizFormv2
 
 def index(request):
 
@@ -93,12 +93,12 @@ def testquiz(request):
     #----------------------------------------------------------------------------------------------------------
     submitted = False
     if request.method == "POST":
-        form = QuizForm(request.POST)
+        form = QuizFormv2(request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('./')
     else:
-        form = QuizForm
+        form = QuizFormv2
         if 'submitted' in request.GET:
             submitted = True
     

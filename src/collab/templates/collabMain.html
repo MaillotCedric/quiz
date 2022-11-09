@@ -15,30 +15,29 @@
 
     <form action method="POST">
         {% csrf_token %}
-        <!--{{form.as_p}}-->
+        <!-- {{form.as_p}} -->
 
-        <div class="card-header">{{ questions.titreQ1 }}</div>
-        <h5 class="card-title">{{ questions.intituleQ1 }}</h5>
-        <!-- <input type="number" name="noquestion" required id="id_noquestion"> -->
-        <input type="radio" name="noquestion" required id="id_noquestion" value="255">
+        <div class="card-header">{{ questions.titreQ1 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ1 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquestion" required id="id_noquestion" value="1" > <!--à rendre dynamique-->
 
-        <input type="radio" name="propRep1" id="id_propRep1">
+        <input type="radio" name="noreponsechoisie" id="id_noreponsechoisie" value="1"> <!--à rendre dynamique-->
         <label class="form-check-label">
-            {{ questions.propRep1Q1 }}
+            {{ questions.propRep1Q1 }} <!--à rendre dynamique-->
         </label>
-        <input type="radio" name="propRep2" id="id_propRep2">
+        <input type="radio" name="noreponsechoisie" id="id_noreponsechoisie" value="2"> <!--à rendre dynamique-->
         <label class="form-check-label">
-            {{ questions.propRep2Q1 }}
+            {{ questions.propRep2Q1 }} <!--à rendre dynamique-->
         </label>
         <!--if la question suivante existe-->
-        <input type="radio" name="propRep3" id="id_propRep3">
+        <input type="radio" name="noreponsechoisie" id="id_noreponsechoisie" value="3"> <!--à rendre dynamique-->
         <label class="form-check-label">
-            {{ questions.propRep3Q1 }}
+            {{ questions.propRep3Q1 }} <!--à rendre dynamique-->
         </label>
         <!--if la question suivante existe-->
-        <input type="radio" name="propRep4" id="id_propRep4">
+        <input type="radio" name="noreponsechoisie" id="id_noreponsechoisie" value="4"> <!--à rendre dynamique-->
         <label class="form-check-label">
-            {{ questions.propRep4Q1 }}
+            {{ questions.propRep4Q1 }} <!--à rendre dynamique-->
         </label>
 
         <br>
