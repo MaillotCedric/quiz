@@ -1,13 +1,14 @@
 from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
-from django.shortcuts import render
-from django.http import HttpResponse
 from cds.models import Questions, PropositionsReponses, Quiz
 from django.template import loader
 
 import xml.etree.ElementTree as etree
 import os
+
+from .forms import TestForm
 
 def index(request):
 
@@ -47,3 +48,17 @@ def quiz(request):
     }
     
     return render (request, "collabMain.html", context=context)
+
+def test(request):
+    submitted = False
+    if request.method == "POST":
+        form = TestForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = TestForm
+        if 'submitted' in request.GET:
+            submitted = True
+    
+    return render(request, "form.html", {'form': form})
