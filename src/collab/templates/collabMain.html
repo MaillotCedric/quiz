@@ -16,6 +16,30 @@
     <form action method="POST">
         {% csrf_token %}
         {{form.as_p}}
+
+        <div class="card-header">{{ questions.titreQ1 }}</div>
+        <h5 class="card-title">{{ questions.intituleQ1 }}</h5>
+
+        <input type="radio" name="propRep1" id="id_propRep1">
+        <label class="form-check-label">
+            {{ questions.propRep1Q1 }}
+        </label>
+        <input type="radio" name="propRep2" id="id_propRep2">
+        <label class="form-check-label">
+            {{ questions.propRep2Q1 }}
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="propRep2" id="id_propRep2">
+        <label class="form-check-label">
+            {{ questions.propRep3Q1 }}
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="propRep2" id="id_propRep2">
+        <label class="form-check-label">
+            {{ questions.propRep4Q1 }}
+        </label>
+
+        <br>
         <input type="submit" name="" value="Enregistrer" >
     </form>
 
