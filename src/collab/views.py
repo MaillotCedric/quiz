@@ -55,7 +55,7 @@ def test(request):
         form = TestForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('./')
     else:
         form = TestForm
         if 'submitted' in request.GET:
