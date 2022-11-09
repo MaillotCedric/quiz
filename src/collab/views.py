@@ -103,8 +103,8 @@ def testquiz(request):
         if 'submitted' in request.GET:
             submitted = True
     
-    reponse = ReponsesChoisiesv2.objects.all()
-    reponse = str(reponse)
+    reponse = ReponsesChoisiesv2.objects.values_list('noquestion')
+    # reponse = str(reponse)
     context={
         'questions' : questions,
         'form' : form,

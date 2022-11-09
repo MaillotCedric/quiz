@@ -38,7 +38,10 @@
         <input type="radio" name="noreponsechoisie" id="id_noreponsechoisie" value="4"> <!--à rendre dynamique-->
         <label class="form-check-label">
             <!-- {{ questions.propRep4Q1 }} -->
-            {{reponse}}
+            {% if reponse == 1 %}
+                {{reponse}}
+            {% endif %}
+            <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
         </label>
 
         <br>
