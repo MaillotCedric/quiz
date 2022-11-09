@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 from cds.models import Questions, PropositionsReponses, Quiz
 from django.template import loader
+from collab.models import ReponsesChoisiesv2
 
 import xml.etree.ElementTree as etree
 import os
@@ -102,9 +103,12 @@ def testquiz(request):
         if 'submitted' in request.GET:
             submitted = True
     
+    reponse = ReponsesChoisiesv2.objects.all()
+    reponse = str(reponse)
     context={
         'questions' : questions,
-        'form' : form
+        'form' : form,
+        'reponse' : reponse
     }
     
     return render(request, "collabMain.html", context=context)
