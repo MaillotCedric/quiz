@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from cds.models import Quiz, Questions
 from django.template import loader
-from comptes.models import Utilisateur, Secteur
+from comptes.models import Utilisateur, Secteur, Role
+from django.contrib.auth.hashers import make_password
 import csv
 
 #-------------------------------------
@@ -43,6 +44,29 @@ def create_secteur(secteur):
     except: # on crée le secteur en BDD
         Secteur.objects.create(codeSecteur=secteur["details"]["code_secteur"], nomSecteur=secteur["details"]["nom_secteur"])
 
+def create_chef_secteur(secteur):
+    mot_de_passe = make_password("azerty")
+    cs = Secteur.objects.get(pk=secteur["details"]["code_secteur"])
+    cr = Role.objects.get(pk="chef")
+    username = secteur["chef"]["matricule"]
+    matricule = secteur["chef"]["matricule"]
+    try: # si l'employé est enregistré en BDD,
+        employe = Utilisateur.objects.get(matricule=matricule)
+        employe.delete() # on le supprime,
+        try: # si il existe un chef de secteur pour ce secteur,
+            chef = Utilisateur.objects.get(codeSecteur=cs.pk, codeRole=cr.pk)
+            chef.delete() # on le supprime
+        except:
+            pass
+        Utilisateur.objects.create(username=username, password=mot_de_passe, matricule=matricule, codeSecteur=cs, codeRole=cr) # on recrée l'employé (en tant que chef de secteur)
+    except: # si non,
+        try: # si il existe un chef de secteur pour ce secteur,
+            chef = Utilisateur.objects.get(codeSecteur=cs.pk, codeRole=cr.pk)
+            chef.delete() # on le supprime
+        except:
+            pass
+        Utilisateur.objects.create(username=username, password=mot_de_passe, matricule=matricule, codeSecteur=cs, codeRole=cr) # on crée l'employé (en tant que chef de secteur)
+
 def index(request, id_chef):
     if request.method == "POST":
         nom_fichier = request.POST["nom_fichier"]
@@ -60,6 +84,7 @@ def index(request, id_chef):
                 elif index > 1:
                     get_infos_collaborateur(elements, secteur)
         create_secteur(secteur)
+        create_chef_secteur(secteur)
 
     if request.user.is_authenticated: # l'utilisateur est bien connecté
         try: # on vérifie que l'id passé dans l'URL existe
