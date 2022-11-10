@@ -218,6 +218,8 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
         i5 += 1
         point = calculScore['coeffQ'+str(i5)]
         scoreMax += point
+            #Calcul final sur 100
+    scoreFinal = score * 100 / scoreMax
     
     #Affichage du score
 
@@ -225,7 +227,8 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
 
         'resultat' : calculScore,
         'score' : score,
-        'scoremax' : scoreMax
+        'scoremax' : scoreMax,
+        'scorefinal' : scoreFinal
 
     }
     return render(request, 'resultat.html', context=context)
