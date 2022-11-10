@@ -26,7 +26,8 @@ def index(request, id_collaborateur):
         if collaborateur.codeRole.pk == "collab": # l'utilisateur est bien un collaborateur
             if request.user.id == int(id_collaborateur): # on empêche un collaborateur d'aller sur une autre page de collaborateur
                 return render(request, "homeCollab.html", {
-                    "collaborateur": collaborateur
+                    "collaborateur": collaborateur,
+                    "id_collaborateur" : id_collaborateur
                 })
             else:
                 return redirect("home_collab", id_collaborateur = request.user.id) # le collaborateur est redirigé vers sa page d'acceuil dédiée
