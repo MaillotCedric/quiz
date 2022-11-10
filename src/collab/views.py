@@ -142,13 +142,14 @@ def testquiz(request, id_collaborateur):
 def resultatquiz(request, id_collaborateur): # À ajouter => collones id collaborateur dans reponses choisiesv3
     #Recup des reponses et bonnes reponses
     calculScore = {}
-    #Recup de la bonne rep
+    score=0
+        #Recup de la bonne rep
     i=0
     for elt in Questions.objects.all(): #Autre solution dans cette boucle => calculScore["bonneRepQ"+str(i)] = elt.bonnereponsequestion
         i+=1
         calculScore["bonneRepQ"+str(i)] = Questions.objects.get(noquestion = i).bonnereponsequestion
     
-    #Recup reponses choisies
+        #Recup reponses choisies
     i2=1
     while i2 == 1:
         calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep1
@@ -196,12 +197,29 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
         calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep22
 
     #Calcul du score
+        #Recup coeff
+    i3=0
+    for elt in Questions.objects.all():
+        i3+=1
+        calculScore['coeffQ'+str(i3)] = Questions.objects.get(noquestion = i3).coefquestion
+        #Calculer les points, comparer les bonnes rep et les repChoisies
+    
+    i4 = 0
+    for elt in Questions.objects.all():
+        i4+=1
+        if calculScore["bonneRepQ"+str(i4)] == calculScore["repChoisieQ"+str(i4)]:
+            score += calculScore['coeffQ'+str(i4)]
+
+
+    
+        #Score final
     
     #Affichage du score
 
     context={
 
-        'resultat' : calculScore
+        'resultat' : calculScore,
+        'score' : score
 
     }
     return render(request, 'resultat.html', context=context)
