@@ -35,7 +35,7 @@ def index(request, id_collaborateur):
     else:
         return redirect("login")
 
-def quiz(request):
+def quiz(request, id_collaborateur):
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
     root = doc.getroot()
     quest32={}
@@ -138,3 +138,30 @@ def testquiz(request, id_collaborateur):
     }
     
     return render(request, "collabMain.html", context=context)
+
+def resultatquiz(request, id_collaborateur): # À ajouter => collones id collaborateur dans reponses choisiesv3
+    #Recup des reponses et bonnes reponses
+    calculScore = {}
+    #Recup de la bonne rep
+    i=0
+    for elt in Questions.objects.all(): #Autre solution dans cette boucle => calculScore["bonneRepQ"+str(i)] = elt.bonnereponsequestion
+        i+=1
+        calculScore["bonneRepQ"+str(i)] = Questions.objects.get(noquestion = i).bonnereponsequestion
+    
+    #Recup reponses choisies
+    i2=0
+    for elt in Questions.objects.all():
+        i2+=1
+        stpmarche = "norep"+str(i)
+        calculScore["repChoisieQ"+str(i)] = ReponsesChoisiesv3.objects.filter(noquiz = 32)
+
+    #Calcul du score
+    
+    #Affichage du score
+
+    context={
+
+        'resultat' : calculScore
+
+    }
+    return render(request, 'resultat.html', context=context)

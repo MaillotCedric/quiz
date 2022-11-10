@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block contenu %}
-    <h1>Quiz rempli par {{ collaborateurs }}</h1>
+    <h1>Collaborateur : {{ collaborateurs }}</h1>
 
     <form action method="POST">
         {% csrf_token %}
@@ -616,7 +616,8 @@
         {% endif %}
         </sections>
         <br>
-        <input type="submit" name="" value="Enregistrer" href="" >
+        <!-- solution pascal avec balise a et input ensemble -->
+        <input type="submit" name="" value="Enregistrer" href="resultatquiz">
     </form>
 
     <script src="{% static 'quiz.js' %}"></script>
