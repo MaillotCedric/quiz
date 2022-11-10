@@ -153,49 +153,49 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
         #Recup reponses choisies
     i2=1
     while i2 == 1:
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep1
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep2
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep2
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep3
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep3
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep4
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep4
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep5
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep5
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep6
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep6
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep7
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep7
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep8
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep8
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep9
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep9
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep10
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep10
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep11
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep11
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep12
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep12
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep13
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep13
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep14
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep14
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep15
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep15
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep16
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep16
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep17
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep17
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep18
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep18
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep19
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep19
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep20
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep20
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep21
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep21
         i2+=1
-        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.get(noquiz = 32).norep22
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep22
 
     #Calcul du score
         #Recup coeff
