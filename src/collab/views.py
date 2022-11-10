@@ -12,6 +12,8 @@ import os
 
 from .forms import TestForm,QuizForm,QuizFormv2, QuizFormv3
 
+from comptes.models import Utilisateur
+
 def index(request, id_collaborateur):
     #metierTest = Metier(codemetier = 'JPRO', nommetier = "Joueur Pro")
     #metierTest.save()
@@ -24,7 +26,8 @@ def index(request, id_collaborateur):
         if collaborateur.codeRole.pk == "collab": # l'utilisateur est bien un collaborateur
             if request.user.id == int(id_collaborateur): # on empêche un collaborateur d'aller sur une autre page de collaborateur
                 return render(request, "homeCollab.html", {
-                    "collaborateur": collaborateur
+                    "collaborateur": collaborateur,
+                    "id_collaborateur" : id_collaborateur
                 })
             else:
                 return redirect("home_collab", id_collaborateur = request.user.id) # le collaborateur est redirigé vers sa page d'acceuil dédiée
@@ -33,7 +36,7 @@ def index(request, id_collaborateur):
     else:
         return redirect("login")
 
-def quiz(request):
+def quiz(request, id_collaborateur):
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
     root = doc.getroot()
     quest32={}
@@ -82,7 +85,7 @@ def test(request):
     
     return render(request, "form.html", {'form': form})
 
-def testquiz(request):
+def testquiz(request, id_collaborateur):
     #------------------------------------recup des questions dans XML------------------------------------------
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
     root = doc.getroot()
@@ -115,7 +118,7 @@ def testquiz(request):
         form = QuizFormv3(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('./')
+            return HttpResponseRedirect('resultatquiz')
     else:
         form = QuizFormv3
         if 'submitted' in request.GET:
@@ -124,11 +127,110 @@ def testquiz(request):
     reponse = ReponsesChoisiesv3.objects.values_list('noquiz')
     # reponse = str(reponse)
     questionbdd = Questions.objects.values()
+    codeSecteur = id_collaborateur
+    collaborateurs = Utilisateur.objects.get(id=codeSecteur) # collaborateurs du secteur
     context={
         'questions' : questions,
         'form' : form,
         'reponse' : reponse,
-        'questionbdd' : questionbdd
+        'questionbdd' : questionbdd,
+        'collaborateurs' : collaborateurs
+
     }
     
     return render(request, "collabMain.html", context=context)
+
+def resultatquiz(request, id_collaborateur): # À ajouter => collones id collaborateur dans reponses choisiesv3
+    #Recup des reponses et bonnes reponses
+    calculScore = {}
+    score=0
+        #Recup de la bonne rep
+    i=0
+    for elt in Questions.objects.all(): #Autre solution dans cette boucle => calculScore["bonneRepQ"+str(i)] = elt.bonnereponsequestion
+        i+=1
+        calculScore["bonneRepQ"+str(i)] = Questions.objects.get(noquestion = i).bonnereponsequestion
+    
+        #Recup reponses choisies
+    i2=1
+    while i2 == 1:
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep1
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep2
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep3
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep4
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep5
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep6
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep7
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep8
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep9
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep10
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep11
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep12
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep13
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep14
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep15
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep16
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep17
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep18
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep19
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep20
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep21
+        i2+=1
+        calculScore["repChoisieQ"+str(i2)] = ReponsesChoisiesv3.objects.filter(noquiz = 32).latest('auto_id_reponse_choisie3').norep22
+
+    #Calcul du score
+        #Recup coeff
+    i3=0
+    for elt in Questions.objects.all():
+        i3+=1
+        calculScore['coeffQ'+str(i3)] = Questions.objects.get(noquestion = i3).coefquestion
+        
+        #Calculer les points, comparer les bonnes rep et les repChoisies    
+    i4 = 0
+    for elt in Questions.objects.all():
+        i4+=1
+        if calculScore["bonneRepQ"+str(i4)] == calculScore["repChoisieQ"+str(i4)]:
+            score += calculScore['coeffQ'+str(i4)]
+
+        #Score final
+            #Score max possible
+    scoreMax=0
+    i5 = 0
+    for elt in Questions.objects.all():
+        i5 += 1
+        point = calculScore['coeffQ'+str(i5)]
+        scoreMax += point
+            #Calcul final sur 100
+    scoreFinal = score * 100 / scoreMax
+    
+    #Affichage du score
+
+    context={
+
+        'resultat' : calculScore,
+        'score' : score,
+        'scoremax' : scoreMax,
+        'scorefinal' : scoreFinal,
+        'id_collaborateur' : id_collaborateur
+
+    }
+    return render(request, 'resultat.html', context=context)

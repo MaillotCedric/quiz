@@ -31,7 +31,7 @@ def index(request, id_chef):
     else:
         return redirect("login")
 
-def importQuiz(request):
+def importQuiz(request, id_chef):
 
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
     root = doc.getroot()
