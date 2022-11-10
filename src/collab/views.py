@@ -4,12 +4,12 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 from cds.models import Questions, PropositionsReponses, Quiz
 from django.template import loader
-from collab.models import ReponsesChoisiesv2
+from collab.models import ReponsesChoisiesv2, ReponsesChoisiesv3
 
 import xml.etree.ElementTree as etree
 import os
 
-from .forms import TestForm,QuizForm,QuizFormv2
+from .forms import TestForm,QuizForm,QuizFormv2, QuizFormv3
 
 def index(request):
 
@@ -94,21 +94,23 @@ def testquiz(request):
     #----------------------------------------------------------------------------------------------------------
     submitted = False
     if request.method == "POST":
-        form = QuizFormv2(request.POST)
+        form = QuizFormv3(request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('./')
     else:
-        form = QuizFormv2
+        form = QuizFormv3
         if 'submitted' in request.GET:
             submitted = True
     
-    reponse = ReponsesChoisiesv2.objects.values_list('noquestion')
+    reponse = ReponsesChoisiesv3.objects.values_list('noquiz')
     # reponse = str(reponse)
+    questionbdd = Questions.objects.values()
     context={
         'questions' : questions,
         'form' : form,
-        'reponse' : reponse
+        'reponse' : reponse,
+        'questionbdd' : questionbdd
     }
     
     return render(request, "collabMain.html", context=context)

@@ -26,3 +26,33 @@ class ReponsesChoisiesv2(models.Model):
 
     class Meta:
         db_table='reponseschoisiesv2'
+
+class ReponsesChoisiesv3(models.Model):
+    auto_id_reponse_choisie3 = models.AutoField(primary_key=True)
+    noquiz = models.CharField(max_length=50)
+    norep1 = models.IntegerField(null=True, blank=True)
+    norep2 = models.IntegerField(null=True, blank=True)
+    norep3 = models.IntegerField(null=True, blank=True)
+    norep4 = models.IntegerField(null=True, blank=True)
+    norep5 = models.IntegerField(null=True, blank=True)
+    norep6 = models.IntegerField(null=True, blank=True)
+    norep7 = models.IntegerField(null=True, blank=True)
+    norep8 = models.IntegerField(null=True, blank=True)
+    norep9 = models.IntegerField(null=True, blank=True)
+    norep10 = models.IntegerField(null=True, blank=True)
+    norep11 = models.IntegerField(null=True, blank=True)
+    norep12 = models.IntegerField(null=True, blank=True)
+    norep13 = models.IntegerField(null=True, blank=True)
+    norep14 = models.IntegerField(null=True, blank=True)
+    norep15 = models.IntegerField(null=True, blank=True)
+    norep16 = models.IntegerField(null=True, blank=True)
+    norep17 = models.IntegerField(null=True, blank=True)
+    norep18 = models.IntegerField(null=True, blank=True)
+    norep19 = models.IntegerField(null=True, blank=True)
+    norep20= models.IntegerField(null=True, blank=True)
+    norep21 = models.IntegerField(null=True, blank=True)
+    norep22 = models.IntegerField(null=True, blank=True)
+
+    class Meta:
+        db_table='reponseschoisiesv3'
+

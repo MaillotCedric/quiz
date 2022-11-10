@@ -16,34 +16,142 @@
     <form action method="POST">
         {% csrf_token %}
         <!-- {{form.as_p}} -->
+        <sections>
 
         <div class="card-header">{{ questions.titreQ1 }}</div> <!--à rendre dynamique-->
         <h5 class="card-title">{{ questions.intituleQ1 }}</h5> <!--à rendre dynamique-->
-        <input hidden type="number" name="noquestion" required id="id_noquestion" value="1" > <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
 
-        <input type="radio" name="noreponsechoisie" id="id_noreponsechoisie" value="1"> <!--à rendre dynamique-->
+        <input type="radio" name="norep1" id="id_norep1" value="1"> <!--à rendre dynamique-->
         <label class="form-check-label">
             {{ questions.propRep1Q1 }} <!--à rendre dynamique-->
         </label>
-        <input type="radio" name="noreponsechoisie" id="id_noreponsechoisie" value="2"> <!--à rendre dynamique-->
+        <input type="radio" name="norep1" id="id_norep1" value="2"> <!--à rendre dynamique-->
         <label class="form-check-label">
             {{ questions.propRep2Q1 }} <!--à rendre dynamique-->
         </label>
         <!--if la question suivante existe-->
-        <input type="radio" name="noreponsechoisie" id="id_noreponsechoisie" value="3"> <!--à rendre dynamique-->
+        <input type="radio" name="norep1" id="id_norep1" value="3"> <!--à rendre dynamique-->
         <label class="form-check-label">
             {{ questions.propRep3Q1 }} <!--à rendre dynamique-->
         </label>
         <!--if la question suivante existe-->
-        <input type="radio" name="noreponsechoisie" id="id_noreponsechoisie" value="4"> <!--à rendre dynamique-->
+        <input type="radio" name="norep1" id="id_norep1" value="4"> <!--à rendre dynamique-->
         <label class="form-check-label">
             <!-- {{ questions.propRep4Q1 }} -->
-            {% if reponse == 1 %}
-                {{reponse}}
-            {% endif %}
+            {{ questions.propRep4Q1 }}
             <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
         </label>
 
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ2 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ2 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep2" id="id_norep2" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q2 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep2" id="id_norep2" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q2 }} <!--à rendre dynamique-->
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="norep2" id="id_norep2" value="3"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep3Q2 }} <!--à rendre dynamique-->
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="norep2" id="id_norep2" value="4"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            <!-- {{ questions.propRep4Q2 }} -->
+            {{ questions.propRep4Q2 }}
+            <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+        </label>
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ3 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ3 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep3" id="id_norep3" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q3 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep3" id="id_norep3" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q3 }} <!--à rendre dynamique-->
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="norep3" id="id_norep3" value="3"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep3Q3 }} <!--à rendre dynamique-->
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="norep3" id="id_norep3" value="4"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            <!-- {{ questions.propRep4Q3 }} -->
+            {{ questions.propRep4Q3 }}
+            <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+        </label>
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ4 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ4 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep4" id="id_norep4" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q4 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep4" id="id_norep4" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q4 }} <!--à rendre dynamique-->
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="norep4" id="id_norep4" value="3"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep3Q4 }} <!--à rendre dynamique-->
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="norep4" id="id_norep4" value="4"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            <!-- {{ questions.propRep4Q4 }} -->
+            {{ questions.propRep4Q4 }}
+            <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+        </label>
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ5 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ5 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep5" id="id_norep5" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q5 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep5" id="id_norep5" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q5 }} <!--à rendre dynamique-->
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="norep5" id="id_norep5" value="3"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep3Q5 }} <!--à rendre dynamique-->
+        </label>
+        <!--if la question suivante existe-->
+        <input type="radio" name="norep5" id="id_norep5" value="4"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            <!-- {{ questions.propRep4Q5 }} -->
+            {{ questions.propRep4Q5 }}
+            <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+        </label>
+
+        </sections>
         <br>
         <input type="submit" name="" value="Enregistrer" >
     </form>
