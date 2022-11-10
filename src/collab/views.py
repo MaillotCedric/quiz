@@ -118,7 +118,7 @@ def testquiz(request, id_collaborateur):
         form = QuizFormv3(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('./')
+            return HttpResponseRedirect('resultatquiz')
     else:
         form = QuizFormv3
         if 'submitted' in request.GET:
@@ -229,7 +229,8 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
         'resultat' : calculScore,
         'score' : score,
         'scoremax' : scoreMax,
-        'scorefinal' : scoreFinal
+        'scorefinal' : scoreFinal,
+        'id_collaborateur' : id_collaborateur
 
     }
     return render(request, 'resultat.html', context=context)
