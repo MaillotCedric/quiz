@@ -2,18 +2,34 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from cds.models import Quiz, Questions, PropositionsReponses
 from django.template import loader
+from comptes.models import Utilisateur
 
 #-------------------------------------
 import xml.etree.ElementTree as etree
 import os
 
 # Create your views here.
-def index(request):
-    quiz32 = Quiz.objects.get(noquiz ='32')
-    context = {
-        'quiz32' : quiz32 
-    }
-    return render (request, "cds/homeCDS.html", context=context)
+
+def index(request, id_chef):
+    if request.user.is_authenticated: # l'utilisateur est bien connecté
+        try: # on vérifie que l'id passé dans l'URL existe
+            chef = Utilisateur.objects.get(pk=id_chef)
+        except: # l'id passé n'existe pas
+            return redirect("index_home_cds", id_chef = request.user.id)
+        codeSecteur = chef.codeSecteur
+        collaborateurs = Utilisateur.objects.filter(codeSecteur=codeSecteur).exclude(codeRole="chef") # collaborateurs du secteur
+        if chef.codeRole.pk == "chef": # l'utilisateur est bien un chef
+            if request.user.id == int(id_chef): # on empêche un chef de secteur d'aller sur une autre page de chef de secteur
+                return render(request, "cds/homeCDS.html", {
+                    "chef": chef,
+                    "collaborateurs": collaborateurs
+                })
+            else:
+                return redirect("index_home_cds", id_chef = request.user.id) # le chef de secteur est redirigé vers sa page d'acceuil dédiée
+        else: # ce n'est pas un chef, c'est donc un collaborateur
+            return redirect("home_collab", id_collaborateur = request.user.id) # on renvoie le chef sur sa page d'accueil
+    else:
+        return redirect("login")
 
 def importQuiz(request):
 
