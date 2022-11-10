@@ -202,24 +202,30 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
     for elt in Questions.objects.all():
         i3+=1
         calculScore['coeffQ'+str(i3)] = Questions.objects.get(noquestion = i3).coefquestion
-        #Calculer les points, comparer les bonnes rep et les repChoisies
-    
+        
+        #Calculer les points, comparer les bonnes rep et les repChoisies    
     i4 = 0
     for elt in Questions.objects.all():
         i4+=1
         if calculScore["bonneRepQ"+str(i4)] == calculScore["repChoisieQ"+str(i4)]:
             score += calculScore['coeffQ'+str(i4)]
 
-
-    
         #Score final
+            #Score max possible
+    scoreMax=0
+    i5 = 0
+    for elt in Questions.objects.all():
+        i5 += 1
+        point = calculScore['coeffQ'+str(i5)]
+        scoreMax += point
     
     #Affichage du score
 
     context={
 
         'resultat' : calculScore,
-        'score' : score
+        'score' : score,
+        'scoremax' : scoreMax
 
     }
     return render(request, 'resultat.html', context=context)
