@@ -37,6 +37,12 @@ def get_infos_collaborateur(elements, secteur):
     secteur["collaborateurs"][matricule_collaborateur]["nom"] = nom_collaborateur
     secteur["collaborateurs"][matricule_collaborateur]["prenom"] = prenom_collaborateur
 
+def create_secteur(secteur):
+    try: # on vérifie si le secteur existe en base de données
+        Secteur.objects.get(pk=secteur["details"]["code_secteur"])
+    except: # on crée le secteur en BDD
+        Secteur.objects.create(codeSecteur=secteur["details"]["code_secteur"], nomSecteur=secteur["details"]["nom_secteur"])
+
 def index(request, id_chef):
     if request.method == "POST":
         nom_fichier = request.POST["nom_fichier"]
@@ -53,10 +59,7 @@ def index(request, id_chef):
                     get_infos_collaborateur(elements, secteur)
                 elif index > 1:
                     get_infos_collaborateur(elements, secteur)
-        try: # on vérifie si le secteur existe en base de données
-            Secteur.objects.get(pk=secteur["details"]["code_secteur"])
-        except: # on crée le secteur en BDD
-            Secteur.objects.create(codeSecteur=secteur["details"]["code_secteur"], nomSecteur=secteur["details"]["nom_secteur"])
+        create_secteur(secteur)
 
     if request.user.is_authenticated: # l'utilisateur est bien connecté
         try: # on vérifie que l'id passé dans l'URL existe
