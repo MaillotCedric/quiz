@@ -12,6 +12,8 @@ import os
 
 from .forms import TestForm,QuizForm,QuizFormv2, QuizFormv3
 
+from comptes.models import Utilisateur
+
 def index(request, id_collaborateur):
     #metierTest = Metier(codemetier = 'JPRO', nommetier = "Joueur Pro")
     #metierTest.save()
@@ -82,7 +84,7 @@ def test(request):
     
     return render(request, "form.html", {'form': form})
 
-def testquiz(request):
+def testquiz(request, id_collaborateur):
     #------------------------------------recup des questions dans XML------------------------------------------
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
     root = doc.getroot()
@@ -124,11 +126,15 @@ def testquiz(request):
     reponse = ReponsesChoisiesv3.objects.values_list('noquiz')
     # reponse = str(reponse)
     questionbdd = Questions.objects.values()
+    codeSecteur = id_collaborateur
+    collaborateurs = Utilisateur.objects.get(id=codeSecteur) # collaborateurs du secteur
     context={
         'questions' : questions,
         'form' : form,
         'reponse' : reponse,
-        'questionbdd' : questionbdd
+        'questionbdd' : questionbdd,
+        'collaborateurs' : collaborateurs
+
     }
     
     return render(request, "collabMain.html", context=context)
