@@ -13,5 +13,13 @@
         </li>
         {% endfor %}
     </ol>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="fileInput" class="form-label">Importer des collaborateurs</label>
+            <input class="form-control form-control-sm" id="fileInput" type="file" name="nom_fichier">
+        </div>
+        <button id="btn-import-csv" type="submit" class="btn btn-primary d-none">Importer</button>
+    </form>
     <!-- <a href="test">Importer quiz 32 !</a> -->
-{% endblock %} 
+{% endblock %}

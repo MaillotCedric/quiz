@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from cds.models import Quiz, Questions
 from django.template import loader
-from comptes.models import Utilisateur
+from comptes.models import Utilisateur, Secteur
+import csv
 
 #-------------------------------------
 
@@ -11,7 +12,52 @@ import os
 
 # Create your views here.
 
+def get_secteur(elements, secteur):
+    code_secteur = elements[0]
+    nom_secteur = elements[1]
+    secteur["details"] = {}
+    secteur["details"]["code_secteur"] = code_secteur
+    secteur["details"]["nom_secteur"] = nom_secteur
+
+def get_infos_chef_secteur(elements, secteur):
+    matricule_chef_secteur = elements[2]
+    nom_chef_secteur = elements[3]
+    prenom_chef_secteur = elements[4]
+    secteur["chef"] = {}
+    secteur["chef"]["matricule"] = matricule_chef_secteur
+    secteur["chef"]["nom"] = nom_chef_secteur
+    secteur["chef"]["prenom"] = prenom_chef_secteur
+
+def get_infos_collaborateur(elements, secteur):
+    matricule_collaborateur = elements[5]
+    nom_collaborateur = elements[6]
+    prenom_collaborateur = elements[7]
+    secteur["collaborateurs"][matricule_collaborateur] = {}
+    secteur["collaborateurs"][matricule_collaborateur]["matricule"] = matricule_collaborateur
+    secteur["collaborateurs"][matricule_collaborateur]["nom"] = nom_collaborateur
+    secteur["collaborateurs"][matricule_collaborateur]["prenom"] = prenom_collaborateur
+
 def index(request, id_chef):
+    if request.method == "POST":
+        nom_fichier = request.POST["nom_fichier"]
+        secteur = {}
+
+        with open("W:/DevIA.E07/FT1B/quiz/secteurs/" + nom_fichier, 'r', newline='') as f:
+            reader = csv.reader(f)
+            secteur["collaborateurs"] = {}
+            for index, row in enumerate(reader):
+                elements = row[0].split(";")
+                if index == 1:
+                    get_secteur(elements, secteur)
+                    get_infos_chef_secteur(elements, secteur)
+                    get_infos_collaborateur(elements, secteur)
+                elif index > 1:
+                    get_infos_collaborateur(elements, secteur)
+        try: # on vérifie si le secteur existe en base de données
+            Secteur.objects.get(pk=secteur["details"]["code_secteur"])
+        except: # on crée le secteur en BDD
+            Secteur.objects.create(codeSecteur=secteur["details"]["code_secteur"], nomSecteur=secteur["details"]["nom_secteur"])
+
     if request.user.is_authenticated: # l'utilisateur est bien connecté
         try: # on vérifie que l'id passé dans l'URL existe
             chef = Utilisateur.objects.get(pk=id_chef)
