@@ -1,11 +1,10 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from cds.models import Quiz, Questions
+from cds.models import Quiz, Questions, PropositionsReponses
 from django.template import loader
 from comptes.models import Utilisateur
 
 #-------------------------------------
-
 import xml.etree.ElementTree as etree
 import os
 
@@ -64,11 +63,11 @@ def importQuiz(request):
         #Image à ajouter ?
         #Insertion dans BDD
         
-        try:
-            enregistrementBDDQuestion = Questions(auto_id_quiz_id=pkRecherchee,noquestion=i, dureequestion=quest32['dureeQ'+str(i)],coefquestion=quest32['coeffQ'+str(i)], bonnereponsequestion=quest32['bonneRepQ'+str(i)])
-            enregistrementBDDQuestion.save()
-        except:
-            erreur2 = 1+1
+        #try:auto_id_quiz_id
+        #    enregistrementBDDQuestion = Questions(auto_id_quiz_id=pkRecherchee,noquestion=i, dureequestion=quest32['dureeQ'+str(i)],coefquestion=quest32['coeffQ'+str(i)], bonnereponsequestion=quest32['bonneRepQ'+str(i)])
+        #    enregistrementBDDQuestion.save()
+        #except:
+        #    erreur2 = 1+1
         
     #Récupère titre,intitulé et feedback----------------------------------------------
     i2 = 0
@@ -81,6 +80,23 @@ def importQuiz(request):
         #feedback
         quest32['feedbackQ'+str(i2)] = elt.find('feedback').text
 
+        #try:
+        #pkRecherchee2 = Questions.objects.filter(auto_id_quiz_id=pkRecherchee, noquestion = i2).values('auto_id_question')
+        #enregistrementBDDQuestion2 = Questions(auto_id_question = pkRecherchee2, titrequestion = quest32['titreQ'+str(i2)], intitulequestion = quest32['intituleQ'+str(i2)], feedbackquestion = quest32['feedbackQ'+str(i2)])
+        #enregistrementBDDQuestion2.save()
+        #except:
+        #    erreur3 = 1+1
+
+    i3=0
+    try:
+        for qst in root: #Juste pour boucler le bon nombre de fois peut être changé si probleme, len(qst) ?
+            i3 += 1
+            enregistrementBDDQuestionTotal = Questions(auto_id_quiz_id=pkRecherchee,noquestion=i3, dureequestion=quest32['dureeQ'+str(i3)],coefquestion=quest32['coeffQ'+str(i3)], bonnereponsequestion=quest32['bonneRepQ'+str(i3)], titrequestion = quest32['titreQ'+str(i3)], intitulequestion = quest32['intituleQ'+str(i3)], feedbackquestion = quest32['feedbackQ'+str(i3)])
+            enregistrementBDDQuestionTotal.save()
+    except:
+        erreur3 = 1+1
+
+
     #Récupère les propositions de reponses-----------------------------------------------
     iQuestion = 0
     for listeReponse in root.findall('.//listerep'):
@@ -89,7 +105,60 @@ def importQuiz(request):
         for propRep in listeReponse:
             #print(propRep.text,"reponse=>",iReponse,"question",iQuestion)
             quest32['propRep'+str(iReponse)+'Q'+str(iQuestion)] = propRep.text
+            #Recup le bon id question
+            idQuestionRecherchee = Questions.objects.filter(noquestion = str(iQuestion), auto_id_quiz_id__in = pkRecherchee).values('auto_id_question')
+            #Enregistrement dans BDD
+            try:
+                enregistrementBDDReponsesQuest = PropositionsReponses(nopropositionrep = iReponse, auto_id_question_id = idQuestionRecherchee, intitulepropositionreponse = quest32['propRep'+str(iReponse)+'Q'+str(iQuestion)])
+                enregistrementBDDReponsesQuest.save()
+            except:
+                erreur4= 1+1
             iReponse +=1
 
     #return redirect('../cds') 
-    return HttpResponse(Quiz(auto_id_quiz=1))
+    return redirect ('index')
+
+def activation(request):
+    activationQuiz = Quiz.objects.get(noquiz='32',evaluation=True)
+    activationQuiz.actif = True
+    activationQuiz.save()
+    
+    return redirect ('index')
+
+def desactivation(request):
+    desactivationQuiz = Quiz.objects.get(noquiz='32',evaluation=True)
+    desactivationQuiz.actif = False
+    desactivationQuiz.save()
+
+    return redirect ('index')
+
+def quiz(request):
+    doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
+    root = doc.getroot()
+    quest32={}
+    pkRecherchee = Quiz.objects.filter(noquiz='32',evaluation=True).values('auto_id_quiz')
+    #------------------------------------------
+    iQuestion = 0
+    for listeReponse in root.findall('.//listerep'):
+        iQuestion +=1
+        iReponse = 1
+        for propRep in listeReponse:
+            #print(propRep.text,"reponse=>",iReponse,"question",iQuestion)
+            quest32['propRep'+str(iReponse)+'Q'+str(iQuestion)] = propRep.text
+            #Enregistrement dans BDD
+            iReponse +=1
+    #------------------------------------------
+    i2 = 0
+    for elt in root.findall("question"):
+        i2+=1
+        #titre
+        quest32['titreQ'+str(i2)] = elt.find('titre').text
+        #intitule
+        quest32['intituleQ'+str(i2)] = elt.find('intitule').text
+        #feedback
+        quest32['feedbackQ'+str(i2)] = elt.find('feedback').text
+    questions = quest32
+    context={
+        'questions' : questions
+    }
+    return render (request, "cds/collabMain.html", context=context)

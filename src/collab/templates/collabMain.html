@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test formulaire quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'quiz.css' %}">
+</head>
+<body>
+
+    <h1>Quiiiiiizcolab</h1>
+
+    <form action method="POST">
+        {% csrf_token %}
+        <!-- {{form.as_p}} -->
+        <sections>
+
+        <div class="card-header">{{ questions.titreQ1 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ1 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep1" id="id_norep1" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q1 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep1" id="id_norep1" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q1 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q1 %}
+            <input type="radio" name="norep1" id="id_norep1" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q1 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q1 %}
+        <input type="radio" name="norep1" id="id_norep1" value="4"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            <!-- {{ questions.propRep4Q1 }} -->
+            {{ questions.propRep4Q1 }}
+            <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+        </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ2 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ2 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep2" id="id_norep2" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q2 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep2" id="id_norep2" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q2 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q2 %}
+            <input type="radio" name="norep2" id="id_norep2" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q2 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q2 %}
+            <input type="radio" name="norep2" id="id_norep2" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q2 }} -->
+                {{ questions.propRep4Q2 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ3 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ3 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep3" id="id_norep3" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q3 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep3" id="id_norep3" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q3 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q3 %}
+            <input type="radio" name="norep3" id="id_norep3" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q3 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q3 %}
+            <input type="radio" name="norep3" id="id_norep3" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q3 }} -->
+                {{ questions.propRep4Q3 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ4 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ4 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep4" id="id_norep4" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q4 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep4" id="id_norep4" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q4 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q4 %}
+            <input type="radio" name="norep4" id="id_norep4" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q4 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q4 %}
+            <input type="radio" name="norep4" id="id_norep4" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q4 }} -->
+                {{ questions.propRep4Q4 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ5 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ5 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep5" id="id_norep5" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q5 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep5" id="id_norep5" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q5 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q5 %}
+            <input type="radio" name="norep5" id="id_norep5" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q5 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q5 %}
+            <input type="radio" name="norep5" id="id_norep5" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q5 }} -->
+                {{ questions.propRep4Q5 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ6 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ6 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep6" id="id_norep6" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q6 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep6" id="id_norep6" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q6 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q6 %}
+            <input type="radio" name="norep6" id="id_norep6" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q6 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q6 %}
+            <input type="radio" name="norep6" id="id_norep6" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q6 }} -->
+                {{ questions.propRep4Q6 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ7 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ7 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep7" id="id_norep7" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q7 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep7" id="id_norep7" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q7 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q7 %}
+            <input type="radio" name="norep7" id="id_norep7" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q7 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q7 %}
+            <input type="radio" name="norep7" id="id_norep7" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q7 }} -->
+                {{ questions.propRep4Q7 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ8 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ8 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep8" id="id_norep8" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q8 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep8" id="id_norep8" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q8 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q8 %}
+            <input type="radio" name="norep8" id="id_norep8" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q8 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q8 %}
+            <input type="radio" name="norep8" id="id_norep8" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q8 }} -->
+                {{ questions.propRep4Q8 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ9 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ9 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep9" id="id_norep9" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q9 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep9" id="id_norep9" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q9 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q9 %}
+            <input type="radio" name="norep9" id="id_norep9" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q9 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q9 %}
+            <input type="radio" name="norep9" id="id_norep9" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q9 }} -->
+                {{ questions.propRep4Q9 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ10 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ10 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep10" id="id_norep10" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q10 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep10" id="id_norep10" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q10 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q10 %}
+            <input type="radio" name="norep10" id="id_norep10" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q10 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q10 %}
+            <input type="radio" name="norep10" id="id_norep10" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q10 }} -->
+                {{ questions.propRep4Q10 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ11 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ11 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep11" id="id_norep11" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q11 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep11" id="id_norep11" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q11 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q11 %}
+            <input type="radio" name="norep11" id="id_norep11" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q11 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q11 %}
+            <input type="radio" name="norep11" id="id_norep11" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q11 }} -->
+                {{ questions.propRep4Q11 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ12 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ12 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep12" id="id_norep12" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q12 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep12" id="id_norep12" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q12 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q12 %}
+            <input type="radio" name="norep12" id="id_norep12" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q12 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q12 %}
+            <input type="radio" name="norep12" id="id_norep12" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q12 }} -->
+                {{ questions.propRep4Q12 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ13 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ13 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep13" id="id_norep13" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q13 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep13" id="id_norep13" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q13 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q13 %}
+            <input type="radio" name="norep13" id="id_norep13" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q13 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q13 %}
+            <input type="radio" name="norep13" id="id_norep13" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q13 }} -->
+                {{ questions.propRep4Q13 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ14 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ14 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep14" id="id_norep14" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q14 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep14" id="id_norep14" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q14 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q14 %}
+            <input type="radio" name="norep14" id="id_norep14" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q14 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q14 %}
+            <input type="radio" name="norep14" id="id_norep14" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q14 }} -->
+                {{ questions.propRep4Q14 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ15 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ15 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep15" id="id_norep15" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q15 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep15" id="id_norep15" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q15 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q15 %}
+            <input type="radio" name="norep15" id="id_norep15" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q15 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q15 %}
+            <input type="radio" name="norep15" id="id_norep15" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q15 }} -->
+                {{ questions.propRep4Q15 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ16 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ16 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep16" id="id_norep16" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q16 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep16" id="id_norep16" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q16 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q16 %}
+            <input type="radio" name="norep16" id="id_norep16" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q16 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q16 %}
+            <input type="radio" name="norep16" id="id_norep16" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q16 }} -->
+                {{ questions.propRep4Q16 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ17 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ17 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep17" id="id_norep17" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q17 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep17" id="id_norep17" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q17 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q17 %}
+            <input type="radio" name="norep17" id="id_norep17" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q17 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q17 %}
+            <input type="radio" name="norep17" id="id_norep17" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q17 }} -->
+                {{ questions.propRep4Q17 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ18 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ18 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep18" id="id_norep18" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q18 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep18" id="id_norep18" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q18 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q18 %}
+            <input type="radio" name="norep18" id="id_norep18" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q18 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q18 %}
+            <input type="radio" name="norep18" id="id_norep18" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q18 }} -->
+                {{ questions.propRep4Q18 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ19 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ19 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep19" id="id_norep19" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q19 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep19" id="id_norep19" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q19 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q19 %}
+            <input type="radio" name="norep19" id="id_norep19" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q19 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q19 %}
+            <input type="radio" name="norep19" id="id_norep19" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q19 }} -->
+                {{ questions.propRep4Q19 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ20 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ20 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep20" id="id_norep20" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q20 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep20" id="id_norep20" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q20 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q20 %}
+            <input type="radio" name="norep20" id="id_norep20" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q20 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q20 %}
+            <input type="radio" name="norep20" id="id_norep20" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q20 }} -->
+                {{ questions.propRep4Q20 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <div class="card-header">{{ questions.titreQ21 }}</div> <!--à rendre dynamique-->
+        <h5 class="card-title">{{ questions.intituleQ21 }}</h5> <!--à rendre dynamique-->
+        <input hidden type="number" name="noquiz" required id="id_noquiz" value="32" > <!--à rendre dynamique-->
+
+        <input type="radio" name="norep21" id="id_norep21" value="1"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep1Q21 }} <!--à rendre dynamique-->
+        </label>
+        <input type="radio" name="norep21" id="id_norep21" value="2"> <!--à rendre dynamique-->
+        <label class="form-check-label">
+            {{ questions.propRep2Q21 }} <!--à rendre dynamique-->
+        </label>
+        {% if questions.propRep3Q21 %}
+            <input type="radio" name="norep21" id="id_norep21" value="3"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                {{ questions.propRep3Q21 }} <!--à rendre dynamique-->
+            </label>
+        {% endif %}
+        {% if questions.propRep4Q21 %}
+            <input type="radio" name="norep21" id="id_norep21" value="4"> <!--à rendre dynamique-->
+            <label class="form-check-label">
+                <!-- {{ questions.propRep4Q21 }} -->
+                {{ questions.propRep4Q21 }}
+                <!-- Utiliser un boucle for elt in reponse avec x + 1 -->
+            </label>
+        {% endif %}
+        </sections>
+        <br>
+        <input type="submit" name="" value="Enregistrer" >
+    </form>
+
+    <script src="{% static 'quiz.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

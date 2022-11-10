@@ -7,6 +7,7 @@ class Quiz(models.Model):
     noquiz = models.CharField(max_length = 50)
     evaluation = models.BooleanField()
     intitulequiz = models.CharField(max_length=50)
+    actif = models.BooleanField(default = False)
 
     class Meta:
         db_table = 'quiz'
@@ -26,4 +27,14 @@ class Questions(models.Model):
     class Meta:
         db_table = 'questions'
         unique_together = (('auto_id_quiz','noquestion'))
+
+class PropositionsReponses(models.Model):
+    auto_id_propositions_reponses = models.AutoField(primary_key=True)
+    nopropositionrep = models.IntegerField()
+    intitulepropositionreponse = models.CharField(max_length=300)
+    auto_id_question = models.ForeignKey(Questions, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'propositionsreponses'
+        unique_together = (('auto_id_question','nopropositionrep'))
 
