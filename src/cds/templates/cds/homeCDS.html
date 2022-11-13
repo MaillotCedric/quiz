@@ -1,22 +1,38 @@
 {% extends 'base.html' %}
 
 {% block contenu %}
-    <h1>Page d'accueil de {{ chef.username }} (chef de secteur {{ chef.codeSecteur.pk }})</h1>
+    {% if chef.first_name %}
+        <h1>Page d'accueil de {{ chef.first_name }} (chef de secteur {{ chef.codeSecteur.pk }})</h1>
+    {% else %}
+        <h1>Page d'accueil de {{ chef.username }} (chef de secteur {{ chef.codeSecteur.pk }})</h1>
+    {% endif %}
     <h2>Liste des collaborateurs du secteur</h2>
     <ol class="list-group list-group-numbered">
         {% for collaborateur in collaborateurs %}
         <li class="list-group-item d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
             <div class="fw-bold">{{ collaborateur.username }}</div>
-                {{ collaborateur.matricule }}
+                {% if chef.first_name %}
+                    {{ collaborateur.first_name }}
+                {% else %}
+                    {{ collaborateur.matricule }}
+                {% endif %}
             </div>
         </li>
         {% endfor %}
     </ol>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="fileInput" class="form-label">Importer des collaborateurs</label>
+            <input class="form-control form-control-sm" id="fileInput" type="file" name="nom_fichier">
+        </div>
+        <button id="btn-import-csv" type="submit" class="btn btn-primary d-none">Importer</button>
+    </form>
     <a href="test">Importer quiz 32 !</a>
     <br>
     <a href="activation">Activer quiz 32</a>
     <br>
     <a href="desactivation">Désactivez quiz 32</a>
     <!-- <a href="test">Importer quiz 32 !</a> -->
-{% endblock %} 
+{% endblock %}

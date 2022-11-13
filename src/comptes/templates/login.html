@@ -12,18 +12,30 @@
 <div class="container text-center pt-3">
     <div class="row justify-content-md-center">
         <div class="col col-lg-6">
-            <form action="" method="POST">
-                {% csrf_token %}
-                <div class="mb-3">
-                    <label for="usernameInput" class="form-label d-flex fw-bold">Nom d'utilisateur</label>
-                    <input type="text" class="form-control" id="usernameInput" name="username">
-                </div>
-                <div class="mb-3">
-                    <label for="passwordInput" class="form-label d-flex fw-bold">Mot de passe</label>
-                    <input type="password" class="form-control" id="passwordInput" name="password">
-                </div>
-                <button type="submit" class="btn btn-primary d-flex">Connexion</button>
-            </form>
+            {% if user.is_authenticated %}
+                <h1>Page de login</h1>
+                <p>Vous êtes déjà connecté</p>
+                <button class="btn btn-info d-flex">
+                    {% if user.codeRole.pk == "chef" %}
+                        <a href="{% url 'index_home_cds' id_chef=user.id %}" class="text-decoration-none link-dark">Retour à la page d'accueil</a>
+                    {% else %}
+                        <a href="{% url 'home_collab' id_collaborateur=user.id %}" class="text-decoration-none link-dark">Retour à la page d'accueil</a>
+                    {% endif %}
+                </button>
+            {% else %}
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="usernameInput" class="form-label d-flex fw-bold">Nom d'utilisateur</label>
+                        <input type="text" class="form-control" id="usernameInput" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordInput" class="form-label d-flex fw-bold">Mot de passe</label>
+                        <input type="password" class="form-control" id="passwordInput" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary d-flex">Connexion</button>
+                </form>
+            {% endif %}
         </div>
     </div>
 </div>
