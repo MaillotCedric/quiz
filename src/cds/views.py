@@ -57,27 +57,21 @@ def create_chef_secteur(secteur):
     nom = secteur["chef"]["nom"]
     prenom = secteur["chef"]["prenom"]
 
-    employe = Utilisateur.objects.filter(matricule=matricule)
+    chef_secteur = Utilisateur.objects.filter(codeSecteur_id=code_secteur, codeRole_id=code_role)
 
-    if employe.exists(): # si l'employé est enregistré en BDD,
-        # on le passe en chef de secteur
-        employe_a_modifier = employe.first()
-        employe_a_modifier.codeRole = Role.objects.get(pk="chef")
-        employe_a_modifier.save()
+    if chef_secteur.exists():
+        chef_secteur_actuel = chef_secteur.first()
+
+        if chef_secteur_actuel.matricule != matricule: # le chef de secteur actuel n'est pas celui présenté sur le csv
+            # le chef de secteur actuel est passé en collaborateur
+            chef_secteur_actuel.codeRole = Role.objects.get(pk="collab")
+            chef_secteur_actuel.save()
+
+            # on crée l'employé en tant que chef de secteur
+            Utilisateur.objects.create(username=username, password=mot_de_passe, matricule=matricule, first_name=prenom, last_name=nom, codeSecteur=Secteur.objects.get(pk=code_secteur), codeRole=Role.objects.get(pk=code_role))
     else:
         # on crée l'employé en tant que chef de secteur
         Utilisateur.objects.create(username=username, password=mot_de_passe, matricule=matricule, first_name=prenom, last_name=nom, codeSecteur=Secteur.objects.get(pk=code_secteur), codeRole=Role.objects.get(pk=code_role))
-
-    # on sélectionne tout les chefs de secteurs
-    chefs_secteur = Utilisateur.objects.filter(codeSecteur_id=code_secteur, codeRole_id=code_role)
-
-    if chefs_secteur.count() > 1: # si il existe plusieurs chef de secteur pour ce secteur,
-        # on exclut celui présenté comme chef de secteur sur le csv
-        chefs_secteur = chefs_secteur.exclude(matricule=matricule)
-        # on passe les chefs de secteurs restants en tant que collaborateur
-        for chef_secteur in chefs_secteur:
-            chef_secteur.codeRole = Role.objects.get(pk="collab")
-            chef_secteur.save()
 
 def create_collaborateurs(secteur):
     mot_de_passe = make_password("azerty")
