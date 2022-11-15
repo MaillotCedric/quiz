@@ -270,4 +270,17 @@ def quiz(request):
     return render (request, "cds/collabMain.html", context=context)
 
 def testImportAuto(request, id_chef):
+    from cds.forms import StudentForm
+
+    if request.method == 'POST':
+        student = StudentForm(request.POST, request.FILES)
+        if student.is_valid():
+            f = request.FILES['file']
+            with open('cds/static/upload/'+f.name, 'wb+') as destination:  
+                for chunk in f.chunks():  
+                    destination.write(chunk) 
+            return HttpResponse("File uploaded successfuly")
+        else:
+            student = StudentForm()
+            return render(request,"cds/testImportAuto.html",{'form':student})
     return render(request, "cds/testImportAuto.html")
