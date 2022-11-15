@@ -234,6 +234,7 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
 
     #Enregistrement de la date
     now = datetime.now()
+    now = now.strftime("%m/%d/%Y, %H:%M:%S")
     enregistrementDate = ReponsesChoisiesv3.objects.last()
     enregistrementDate.datePassage = str(now)
     enregistrementDate.save()
