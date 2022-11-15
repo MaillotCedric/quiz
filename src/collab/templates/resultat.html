@@ -6,5 +6,8 @@
 <p hidden>Pts obtenu: {{ score }}</p>
 <p hidden>Pts max à gagner: {{ scoremax }}</p>
 <h1>Votre score: {{ scorefinal }}%</h1>
+{% for elt in histoScore %}
+    <p>{{elt.score}}</p>
+{% endfor %}
 
 {% endblock %}

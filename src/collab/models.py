@@ -52,6 +52,8 @@ class ReponsesChoisiesv3(models.Model):
     norep20= models.IntegerField(null=True, blank=True)
     norep21 = models.IntegerField(null=True, blank=True)
     norep22 = models.IntegerField(null=True, blank=True)
+    idCollab = models.IntegerField(null=True, blank=True)
+    score = models.CharField(max_length=50, null=True,blank=True)
 
     class Meta:
         db_table='reponseschoisiesv3'

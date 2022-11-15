@@ -21,4 +21,4 @@ class QuizFormv2(ModelForm):
 class QuizFormv3(ModelForm):
     class Meta:
         model = ReponsesChoisiesv3
-        fields = ('noquiz','norep1','norep2','norep3','norep4','norep5','norep6','norep7','norep8','norep9','norep10','norep11','norep12','norep13','norep14','norep15','norep16','norep17','norep18','norep19','norep20','norep21','norep22')
+        fields = ('noquiz','norep1','norep2','norep3','norep4','norep5','norep6','norep7','norep8','norep9','norep10','norep11','norep12','norep13','norep14','norep15','norep16','norep17','norep18','norep19','norep20','norep21','norep22','idCollab')

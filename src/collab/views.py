@@ -137,7 +137,8 @@ def testquiz(request, id_collaborateur):
         'form' : form,
         'reponse' : reponse,
         'questionbdd' : questionbdd,
-        'collaborateurs' : collaborateurs
+        'collaborateurs' : collaborateurs,
+        'idCollab' : id_collaborateur
 
     }
     
@@ -224,8 +225,13 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
         scoreMax += point
             #Calcul final sur 100
     scoreFinal = score * 100 / scoreMax
+    #Enregistrement du score
+    enregistrementScore = ReponsesChoisiesv3.objects.last()
+    enregistrementScore.score = str(scoreFinal)
+    enregistrementScore.save()
     
     #Affichage du score
+    histoScore = ReponsesChoisiesv3.objects.all()
 
     context={
 
@@ -233,7 +239,8 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
         'score' : score,
         'scoremax' : scoreMax,
         'scorefinal' : scoreFinal,
-        'id_collaborateur' : id_collaborateur
+        'id_collaborateur' : id_collaborateur,
+        "histoScore" : histoScore 
 
     }
     return render(request, 'resultat.html', context=context)
