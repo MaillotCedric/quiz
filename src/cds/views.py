@@ -268,3 +268,6 @@ def quiz(request):
         'questions' : questions
     }
     return render (request, "cds/collabMain.html", context=context)
+
+def testImportAuto(request, id_chef):
+    return render(request, "cds/testImportAuto.html")
