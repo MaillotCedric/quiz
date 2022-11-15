@@ -29,6 +29,14 @@
         </div>
         <button id="btn-import-csv" type="submit" class="btn btn-primary d-none">Importer</button>
     </form>
+    <!-- DEBUT TEST -->
+    <form method="POST" class="post-form" enctype="multipart/form-data">  
+        {% csrf_token %}  
+        {{ form.as_p }}  
+        <button type="submit" class="save btn btn-default">Importer un quiz</button>  
+    </form>
+    <!-- FIN TEST -->
+    <a href="http://127.0.0.1:8000/cds/{{idChef}}/testImportAuto">Importer</a>
     <a href="http://127.0.0.1:8000/cds/2/test">Importer quiz 32 !</a>
     <br>
     <a href="http://127.0.0.1:8000/cds/2/activation">Activer quiz 32</a>

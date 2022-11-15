@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire notemini="75">
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Le contre-plaqué 1</titre>
+    <intitule>Quel est l'inconvénient du contre-plaqué dans
+l'utilisation du coffrage :</intitule>
+    <listerep>
+      <reponse>Résistant au coffrage</reponse>
+      <reponse>Prix de revient élevé et s'abîme rapidement dans le cas 
+de clouage et déclouage fréquent</reponse>
+      <reponse>Mauvaise étanchéité au droit de la peau du coffrage</reponse>
+      <reponse>Facilité de réalisation des coffrages</reponse>
+    </listerep>
+    <feedback>Préparer le coffrage</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Le contre-plaqué 2</titre>
+    <intitule>Dans quel cas utilise-t-on essentiellement le contre-plaqué bakélisé :</intitule>
+    <listerep>
+      <reponse>Pour fabriquer du béton</reponse>
+      <reponse>Quand on veut un parement très soigné, brut de décoffrage</reponse>
+      <reponse>Pour protéger des risques de salissures</reponse>
+      <reponse>C'est plus économique qu'un coffrage réalisé avec des planches de coffrage</reponse>
+    </listerep>
+    <feedback>Préparer le coffrage</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie des bois de coffrage </titre>
+    <intitule>Un bois de coffrage ayant une section de 6,5 x 18, est :</intitule>
+    <listerep>
+      <reponse>Un chevron</reponse>
+      <reponse>Un madrier</reponse>
+      <reponse>Un bastaing</reponse>
+      <reponse>Un liteau</reponse>
+    </listerep>
+    <feedback>Préparer le coffrage</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Peau du coffrage</titre>
+    <intitule>Qu'appelle-t-on "La peau du coffrage" :</intitule>
+    <listerep>
+      <reponse>Le système d'étaiement</reponse>
+      <reponse>L'élément de coffrage au contact du béton</reponse>
+      <reponse>Une partie de coffrage au contact des étais</reponse>
+      <reponse>Un élément constituant des raidisseurs secondaires</reponse>
+    </listerep>
+    <feedback>Préparer le coffrage</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Raidisseurs secondaires de coffrage</titre>
+    <intitule>Vous réaliser le coffrage d'une paillasse, avec du contre-plaqué CTBX de 15 mm d'épaisseur.
+L'écartement des raidisseurs secondaires sera de :</intitule>
+    <listerep>
+      <reponse>20 cm maximum d'axe en axe</reponse>
+      <reponse>40 cm</reponse>
+      <reponse>90 cm</reponse>
+      <reponse>1,50 m</reponse>
+    </listerep>
+    <feedback>Préparer le coffrage</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Tracé des bois de coffrage</titre>
+    <intitule>Quand on trace l'épaisseur des bois
+sur le mur d'échiffre :</intitule>
+    <listerep>
+      <reponse>On perd du temps</reponse>
+      <reponse>Cela permet de ne pas faire de sciage manuel</reponse>
+      <reponse>On dit que l'on trace l'épure du coffrage</reponse>
+      <reponse>On facilite le coulage du béton</reponse>
+    </listerep>
+    <feedback>Préparer le coffrage</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Outil de coffrage</titre>
+    <intitule>Une fausse équerre :</intitule>
+    <listerep>
+      <reponse>Est une équerre qui n'est plus juste</reponse>
+      <reponse>Est appelée aussi "Sauterelle"</reponse>
+      <reponse>S'utilise pour tracer les contremarches</reponse>
+      <reponse>Pour positionner les pointes sur les coffrages</reponse>
+    </listerep>
+    <feedback>Préparer le coffrage</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Dimension des coffrages</titre>
+    <intitule>La largeur du coffrage du dessous de l'escalier doit avoir pour dimension minimale :</intitule>
+    <listerep>
+      <reponse>L'emmarchement de l'escalier</reponse>
+      <reponse>La largeur de la peau de coffrage de la paillasse</reponse>
+      <reponse>La valeur de l'emmarchement + la hauteur de rive + la largeur de butée basse du buton</reponse>
+      <reponse>2 hauteurs de marche + 1 giron</reponse>
+    </listerep>
+    <feedback>Préparer le coffrage</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Les aciers en attente</titre>
+    <intitule>Vous devez façonner les aciers en attente du palier d'arrivée, de quoi tenez-vous compte :</intitule>
+    <listerep>
+      <reponse>De la longueur des marches</reponse>
+      <reponse>Du diamètre des aciers</reponse>
+      <reponse>Du rayon de cintrage et de l'enrobage</reponse>
+      <reponse>Du dosage de béton </reponse>
+    </listerep>
+    <feedback>Mettre en place les éléments du coffrage</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c6_1.jpg" bonne="1" duree="00:00:30.00" coeff="2">
+    <titre>Position des aciers</titre>
+    <intitule>Indiquez d'après le dessin, la disposition d'armature conforme aux règlements en vigueur :
+Pour afficher le dessin, cliquez sur l'icône "oeil".</intitule>
+    <listerep>
+      <reponse>Schéma A</reponse>
+      <reponse>Schéma B</reponse>
+      <reponse>Schéma C</reponse>
+    </listerep>
+    <feedback>Mettre en place les éléments du coffrage</feedback>
+  </question>
+  <question bonne="4" duree="00:00:30.00" coeff="1">
+    <titre>Position du coffrage</titre>
+    <intitule>Quand vous mettez en place les éléments du coffrage, vous tenez compte :</intitule>
+    <listerep>
+      <reponse>De l'épaisseur des semelles</reponse>
+      <reponse>De la longueur des étais</reponse>
+      <reponse>De la section des bois que vous utilisez</reponse>
+      <reponse>Du traçage de l'épure sur le mur d'échiffre</reponse>
+    </listerep>
+    <feedback>Mettre en place les éléments du coffrage</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Huile de démoulage</titre>
+    <intitule>Avant de réaliser le ferraillage de l'escalier, nous utilisons l'huile de démoulage :</intitule>
+    <listerep>
+      <reponse>Pour éviter les bulles d'air dans le béton</reponse>
+      <reponse>Pure, c'est préférable</reponse>
+      <reponse>Pour limiter l'adhérence entre la peau du coffrage et le béton</reponse>
+      <reponse>Pour économiser du béton</reponse>
+    </listerep>
+    <feedback>Mettre en place les armatures</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Ordre de réalisation</titre>
+    <intitule>L'application de l'huile de démoulage réalisée, nous mettons en place le ferraillage d'un escalier à 2 volées dans un ordre bien précis :</intitule>
+    <listerep>
+      <reponse>L'armature de la 1ère volée en premier, c'est plus facile</reponse>
+      <reponse>L'armature de la 2ème volée en premier, pour permettre un bon liaisonnement </reponse>
+      <reponse>L'armature du palier intermédiaire en premier, pour faciliter le liaisonnement des armatures des 2 volées</reponse>
+      <reponse>L'ensemble des armatures en une seule fois puisqu'elles sont souvent préfabriquées en usine</reponse>
+    </listerep>
+    <feedback>Mettre en place les armatures</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c7_1.jpg" bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Coudes et ancrages 1</titre>
+    <intitule> Le façonnage des "Coudes" est représenté par le :
+Pour afficher le dessin, cliquez sur l'icône "oeil".</intitule>
+    <listerep>
+      <reponse>Schéma A</reponse>
+      <reponse>schéma B</reponse>
+      <reponse>Schéma C</reponse>
+    </listerep>
+    <feedback>Mettre en place les armatures</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c7_1.jpg" bonne="1" duree="00:00:30.00" coeff="2">
+    <titre>Coudes et ancrages 2</titre>
+    <intitule> Le façonnage des "Ancrages"est représenté par le :
+Pour afficher le dessin, cliquez sur l'icône "oeil".</intitule>
+    <listerep>
+      <reponse>Schéma A</reponse>
+      <reponse>schéma B</reponse>
+      <reponse>Schéma C</reponse>
+    </listerep>
+    <feedback>Mettre en place les armatures</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Cote brute de coulage</titre>
+    <intitule>La hauteur de la 1ère contremarche est :</intitule>
+    <listerep>
+      <reponse>Plus importante que celle des autres contremarches</reponse>
+      <reponse>Moins importante que celle des autres contremarches</reponse>
+      <reponse>En fonction de l'épaisseur des revêtements, de la marche et du palier de départ</reponse>
+      <reponse>En fonction de l'épaisseur de la paillasse</reponse>
+    </listerep>
+    <feedback>Mettre en place le coffrage des contremarches</feedback>
+  </question>
+  <question bonne="1" duree="00:00:30.00" coeff="2">
+    <titre>Coffrage des contremarches</titre>
+    <intitule>Pour mettre en place le coffrage des contremarches,
+il faut :</intitule>
+    <listerep>
+      <reponse>Respecter le tracé "brut"; mettre de niveau, d'aplomb et contrôler la largeur de la marche à chaque contremarche</reponse>
+      <reponse>Commencer par le haut de l'escalier</reponse>
+      <reponse>Commencer au milieu de la volée</reponse>
+      <reponse>Commencer par le palier intermédiaire</reponse>
+    </listerep>
+    <feedback>Mettre en place le coffrage des contremarches</feedback>
+  </question>
+</questionnaire>

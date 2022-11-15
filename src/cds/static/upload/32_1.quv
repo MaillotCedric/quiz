@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire notemini="75">
+  <question image="$root\ress_mac_v2\img_quest\32_c1_1.jpg" bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie d'un escalier 1</titre>
+    <intitule>Indiquez la terminologie de l'élément repéré par la 
+flèche ( A ), proposée sur la perspective :
+Pour afficher le dessin, cliquez sur l'icône "œil".</intitule>
+    <listerep>
+      <reponse>Volée </reponse>
+      <reponse>Palier de repos </reponse>
+      <reponse>Emmarchement </reponse>
+      <reponse>Dessus de marche </reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c1_1.jpg" bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie d'un escalier 2</titre>
+    <intitule>Indiquez la terminologie de l'élément repéré par
+la flèche ( B ), proposée sur la perspective :
+Pour afficher le dessin, cliquez sur l'icône "œil".</intitule>
+    <listerep>
+      <reponse>Mur d'échiffre </reponse>
+      <reponse>Contremarche </reponse>
+      <reponse>Dessus de marche </reponse>
+      <reponse>Palier d'arrivée </reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c1_1.jpg" bonne="4" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie d'un escalier 3</titre>
+    <intitule>Indiquez la terminologie de l'élément repéré par
+la flèche ( C ), proposée sur la perspective :
+Pour afficher le dessin, cliquez sur l'icône "œil".</intitule>
+    <listerep>
+      <reponse>Contremarche </reponse>
+      <reponse>Emmarchement </reponse>
+      <reponse>Palier de repos </reponse>
+      <reponse>Dessus de marche </reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c1_1.jpg" bonne="1" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie d'un escalier 4</titre>
+    <intitule>Indiquez la terminologie de l'élément repéré par
+la flèche ( D ), proposée sur la perspective :
+Pour afficher le dessin, cliquez sur l'icône "oeil".</intitule>
+    <listerep>
+      <reponse>Volée </reponse>
+      <reponse>Palier d'arrivée </reponse>
+      <reponse>Mur d'échiffre </reponse>
+      <reponse>Echappée </reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c1_1.jpg" bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie d'un escalier 5</titre>
+    <intitule>Indiquez la terminologie de l'élément repéré par
+la flèche ( E ), proposée sur la perspective :
+Pour afficher le dessin, cliquez sur l'icône "œil".</intitule>
+    <listerep>
+      <reponse>Giron </reponse>
+      <reponse>Palier de repos </reponse>
+      <reponse>Collet </reponse>
+      <reponse>Ligne de foulée </reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c1_1.jpg" bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie d'un escalier 6</titre>
+    <intitule>Indiquez la terminologie de l'élément repéré par
+la flèche ( F ), proposée sur la perspective :
+Pour afficher le dessin, cliquez sur l'icône "œil".</intitule>
+    <listerep>
+      <reponse>Volée </reponse>
+      <reponse>Contremarche </reponse>
+      <reponse>Mur d'échiffre </reponse>
+      <reponse>Largeur de marche </reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c1_1.jpg" bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Terminologie d'un escalier 7</titre>
+    <intitule>Indiquez la terminologie de l'élément repéré par
+la flèche ( G ), proposée sur la perspective :
+Pour afficher le dessin, cliquez sur l'icône "œil".</intitule>
+    <listerep>
+      <reponse>Giron </reponse>
+      <reponse>Palier d'arrivée </reponse>
+      <reponse>Palier de repos </reponse>
+      <reponse>Ligne de foulée </reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c1_2.jpg" bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Définir la forme d'un escalier</titre>
+    <intitule>Quel est l'escalier qui n'est pas un escalier droit :
+Pour afficher le dessin, cliquez sur l'icône "œil". </intitule>
+    <listerep>
+      <reponse>Schéma A</reponse>
+      <reponse>Schéma B</reponse>
+      <reponse>Schéma C</reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c1_3.jpg" bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Définir l'échappée</titre>
+    <intitule>Quelle est la hauteur minimale de l'échappée pour un escalier :
+Pour afficher le dessin, cliquez sur l'icône "œil". </intitule>
+    <listerep>
+      <reponse>1,80 m</reponse>
+      <reponse>1,90 m</reponse>
+      <reponse>2,00 m</reponse>
+      <reponse>2,20 m</reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+  <question image="$root\ress_mac_v2\img_quest\32_c1_4.jpg" bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Définir le sens de montée</titre>
+    <intitule>Indiquez le sens de montée de l'escalier :
+Pour afficher le dessin, cliquez sur l'icône "œil".</intitule>
+    <listerep>
+      <reponse>A vers B</reponse>
+      <reponse>B vers A</reponse>
+      <reponse>A ou B</reponse>
+    </listerep>
+    <feedback>Extraire d'un plan les informations</feedback>
+  </question>
+</questionnaire>

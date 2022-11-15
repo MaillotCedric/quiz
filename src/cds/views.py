@@ -95,6 +95,22 @@ def create_collaborateurs(secteur):
         Utilisateur.objects.create(username=username, password=mot_de_passe, matricule=matricule, first_name=prenom, last_name=nom, codeSecteur=Secteur.objects.get(pk=code_secteur), codeRole=Role.objects.get(pk=code_role))
 
 def index(request, id_chef):
+    # TEST
+    from cds.forms import StudentForm
+    if request.method == 'POST':
+        student = StudentForm(request.POST, request.FILES)
+        if student.is_valid():
+            f = request.FILES['file']
+            with open('cds/static/upload/'+f.name, 'wb+') as destination:  
+                for chunk in f.chunks():  
+                    destination.write(chunk) 
+            return render(request, "index_home_cds")
+        else:
+            student = StudentForm()
+            return render(request,"cds/testImportAuto.html",{'form':student})
+
+
+    # FIN TEST
     if request.method == "POST":
         nom_fichier = request.POST["nom_fichier"]
         secteur = {}
@@ -127,7 +143,8 @@ def index(request, id_chef):
                 return render(request, "cds/homeCDS.html", {
                     "chef": chef,
                     "collaborateurs": collaborateurs,
-                    "actif" : actif
+                    "actif" : actif,
+                    "idChef" : id_chef
                 })
             else:
                 return redirect("index_home_cds", id_chef = request.user.id) # le chef de secteur est redirigé vers sa page d'acceuil dédiée

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<questionnaire notemini="75">
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Temps de décoffrage de l'escalier</titre>
+    <intitule>Le temps de décoffrage de l'escalier dépend :</intitule>
+    <listerep>
+      <reponse>De la protection du béton faite après le coulage</reponse>
+      <reponse>De la nature du ciment, du dosage, de la température ambiante et de la consistance du béton au coulage</reponse>
+      <reponse>De l'armature, de la finition réalisée sur les marches
+et du type de coffrage
+et </reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Décoffrage de l'escalier 1</titre>
+    <intitule>Qui décide du moment du décoffrage de l'escalier :</intitule>
+    <listerep>
+      <reponse>Vous, c'est votre travail</reponse>
+      <reponse>Le chef de chantier</reponse>
+      <reponse>L'ouvrier le plus qualifié sur le chantier</reponse>
+      <reponse>Le client</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Décoffrage de l'escalier 2</titre>
+    <intitule>Pour décoffrer un escalier, que faites-vous en premier :</intitule>
+    <listerep>
+      <reponse>Enlever les filières et les étais</reponse>
+      <reponse>Enlever la peau du coffrage</reponse>
+      <reponse>Desserrer les étais métalliques et/ou les coins</reponse>
+      <reponse>Enlever les supports intermédiaires</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="1">
+    <titre>Décoffrage de l'escalier 3</titre>
+    <intitule>Pour décoffrer un escalier, que faites-vous en second :</intitule>
+    <listerep>
+      <reponse>Enlever les filières et les étais</reponse>
+      <reponse>Enlever la peau du coffrage</reponse>
+      <reponse>Desserrer les étais métalliques et/ou les coins</reponse>
+      <reponse>Enlever les supports intermédiaires</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="4" duree="00:00:30.00" coeff="1">
+    <titre>Décoffrage de l'escalier 4</titre>
+    <intitule>Pour décoffrer un escalier, que faites-vous en troisième :</intitule>
+    <listerep>
+      <reponse>Enlever les filières et les étais</reponse>
+      <reponse>Enlever la peau du coffrage</reponse>
+      <reponse>Desserrer les étais métalliques et/ou les coins</reponse>
+      <reponse>Enlever les supports intermédiaires</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Décoffrage de l'escalier 5</titre>
+    <intitule>Une épaufrure, c'est</intitule>
+    <listerep>
+      <reponse>Du béton bien coulé, bien vibré</reponse>
+      <reponse>Un outil de décoffrage</reponse>
+      <reponse>Un angle cassé à cause d'un choc ou d'un mauvais décoffrage</reponse>
+      <reponse>Un béton en débord au raccordement des panneaux</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="1">
+    <titre>Finitions de l'escalier</titre>
+    <intitule>Pour faire un ragréage au mortier :</intitule>
+    <listerep>
+      <reponse>Vous mélanger du sable fin et du plâtre</reponse>
+      <reponse>Vous mélanger du sable fin et du ciment avec une xroportion de 3 pour 1</reponse>
+      <reponse>Vous utilisez un produit du commerce </reponse>
+      <reponse>Vous faites du béton dosé identique à celui du coulage</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="2" duree="00:00:30.00" coeff="2">
+    <titre>Sécurité 1</titre>
+    <intitule>La protection au vide d'un escalier, se fait :</intitule>
+    <listerep>
+      <reponse>Avant le décoffrage</reponse>
+      <reponse>Après le décoffrage et avant le ragréage </reponse>
+      <reponse>Après le décoffrage mais après le ragréage</reponse>
+      <reponse>Après le ragréage de la paillasse</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+  <question bonne="3" duree="00:00:30.00" coeff="2">
+    <titre>Sécurité 2</titre>
+    <intitule>La protection au vide d'un escalier, se fait :</intitule>
+    <listerep>
+      <reponse>Avec des planches de coffrage et des serre-joints</reponse>
+      <reponse>Uniquement à la fin du chantier avec le garde-corps définitif</reponse>
+      <reponse>Avec des éléments qui permettent de placer 1 lisse haute, 1 sous lisse et 1 plinthe</reponse>
+    </listerep>
+    <feedback>Décoffrer et mettre en place des garde-corps</feedback>
+  </question>
+</questionnaire>
