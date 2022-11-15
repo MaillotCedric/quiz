@@ -99,7 +99,7 @@ def index(request, id_chef):
         nom_fichier = request.POST["nom_fichier"]
         secteur = {}
 
-        with open("W:/DevIA.E07/FT1B/quiz/secteurs/" + nom_fichier, 'r', newline='') as f:
+        with open("C:/Users/jwick/Desktop/Brief 1B/quiz/quentin/secteurs/" + nom_fichier, 'r', newline='') as f:
             reader = csv.reader(f)
             secteur["collaborateurs"] = []
             for index, row in enumerate(reader):
@@ -121,11 +121,13 @@ def index(request, id_chef):
             return redirect("index_home_cds", id_chef = request.user.id)
         codeSecteur = chef.codeSecteur
         collaborateurs = Utilisateur.objects.filter(codeSecteur=codeSecteur).exclude(codeRole="chef").exclude(codeRole="admin") # collaborateurs du secteur
+        actif = Quiz.objects.get(noquiz="32").actif
         if chef.codeRole.pk == "chef": # l'utilisateur est bien un chef
             if request.user.id == int(id_chef): # on empêche un chef de secteur d'aller sur une autre page de chef de secteur
                 return render(request, "cds/homeCDS.html", {
                     "chef": chef,
-                    "collaborateurs": collaborateurs
+                    "collaborateurs": collaborateurs,
+                    "actif" : actif
                 })
             else:
                 return redirect("index_home_cds", id_chef = request.user.id) # le chef de secteur est redirigé vers sa page d'acceuil dédiée
@@ -136,6 +138,7 @@ def index(request, id_chef):
 
 def importQuiz(request, id_chef):
 
+    print("test")
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
     root = doc.getroot()
 
@@ -221,14 +224,14 @@ def importQuiz(request, id_chef):
     #return redirect('../cds') 
     return redirect ('index')
 
-def activation(request):
+def activation(request, id_chef):
     activationQuiz = Quiz.objects.get(noquiz='32',evaluation=True)
     activationQuiz.actif = True
     activationQuiz.save()
     
     return redirect ('index')
 
-def desactivation(request):
+def desactivation(request, id_chef):
     desactivationQuiz = Quiz.objects.get(noquiz='32',evaluation=True)
     desactivationQuiz.actif = False
     desactivationQuiz.save()
