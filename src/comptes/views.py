@@ -43,6 +43,11 @@ def create_collaborateurs(secteur):
     Utilisateur.objects.create(username="jacques", password=mot_de_passe, email="jacques@example.com", matricule="AAAC", codeSecteur=cs, codeMetier=cm, codeRole=cr)
     Utilisateur.objects.create(username="marie", password=mot_de_passe, email="marie@example.com", matricule="AAAD", codeSecteur=cs, codeMetier=cm, codeRole=cr)
 
+def create_chef_secteur_MKT():
+    mot_de_passe = make_password("azerty")
+    cs = Secteur.objects.get(pk="MKT")
+    cr = Role.objects.get(pk="chef")
+    Utilisateur.objects.create(username="297K", password=mot_de_passe, matricule="297K", first_name="Johnny", last_name="SWAKIMAL", codeSecteur=cs, codeRole=cr)
 
 def index(request):
     create_roles()
@@ -56,6 +61,8 @@ def index(request):
     create_chef_secteur("RD")
     # --------------------------- Création collaborateurs RD ---------
     create_collaborateurs("RD")
+    # --------------------------- Création chef secteur MKT ----------
+    create_chef_secteur_MKT()
     # ------------------- test contrainte d'unicité matricule -------
     # mot_de_passe = make_password("azerty")
     # cs = Secteur.objects.get(pk="RD")
