@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from comptes.models import Utilisateur
+from datetime import datetime
 
 # Create your views here.
 from cds.models import Questions, PropositionsReponses, Quiz
@@ -230,8 +231,16 @@ def resultatquiz(request, id_collaborateur): # À ajouter => collones id collabo
     enregistrementScore.score = str(scoreFinal)
     enregistrementScore.save()
     
+
+    #Enregistrement de la date
+    now = datetime.now()
+    enregistrementDate = ReponsesChoisiesv3.objects.last()
+    enregistrementDate.datePassage = str(now)
+    enregistrementDate.save()
+    #Affichage de la date de passage
     #Affichage du score
     histoScore = ReponsesChoisiesv3.objects.all()
+    id_collaborateur = int(id_collaborateur)
 
     context={
 

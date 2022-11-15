@@ -54,6 +54,7 @@ class ReponsesChoisiesv3(models.Model):
     norep22 = models.IntegerField(null=True, blank=True)
     idCollab = models.IntegerField(null=True, blank=True)
     score = models.CharField(max_length=50, null=True,blank=True)
+    datePassage = models.CharField(max_length=50, null=True,blank=True)
 
     class Meta:
         db_table='reponseschoisiesv3'
