@@ -229,14 +229,14 @@ def activation(request, id_chef):
     activationQuiz.actif = True
     activationQuiz.save()
     
-    return redirect ('index')
+    return redirect ("http://127.0.0.1:8000/cds/<id_chef>")
 
 def desactivation(request, id_chef):
     desactivationQuiz = Quiz.objects.get(noquiz='32',evaluation=True)
     desactivationQuiz.actif = False
     desactivationQuiz.save()
 
-    return redirect ('index')
+    return redirect ('http://127.0.0.1:8000/cds/<id_chef>')
 
 def quiz(request):
     doc = etree.parse('../questionnaires/questionnaires_32/32.quv') # À rendre dynamique
