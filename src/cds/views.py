@@ -10,7 +10,11 @@ import csv
 import xml.etree.ElementTree as etree
 import os
 
+import numpy as np
+
 # Create your views here.
+
+tableau_de_bord = tableau_de_bord = np.empty((2,3,3), dtype=object)
 
 def get_secteur(elements, secteur):
     code_secteur = elements[0]
@@ -94,25 +98,107 @@ def create_collaborateurs(secteur):
 
         Utilisateur.objects.create(username=username, password=mot_de_passe, matricule=matricule, first_name=prenom, last_name=nom, codeSecteur=Secteur.objects.get(pk=code_secteur), codeRole=Role.objects.get(pk=code_role))
 
+def init_tableau_de_bord():
+    tableau_de_bord[0,0,0] = "nom du fichier"
+    tableau_de_bord[0,1,0] = "secteur"
+    tableau_de_bord[0,2,0] = "chef"
+    tableau_de_bord[0,1,1] = "existe"
+    tableau_de_bord[0,1,2] = "import unique"
+    tableau_de_bord[0,2,1] = "existe"
+    tableau_de_bord[0,2,2] = "identique"
+
+def get_infos_csv(reader, secteur):
+    for index, row in enumerate(reader):
+        elements = row[0].split(";")
+        if index == 1:
+            secteur["nb_secteurs"] = 1
+            get_secteur(elements, secteur)
+            get_infos_chef_secteur(elements, secteur)
+            get_infos_collaborateur(elements, secteur)
+        elif index > 1:
+            code_secteur_enregistre = secteur["details"]["code_secteur"]
+            code_secteur_en_cours = elements[0]
+
+            if code_secteur_enregistre != code_secteur_en_cours and secteur["nb_secteurs"] < 2:
+                secteur["nb_secteurs"] += 1
+
+            get_infos_collaborateur(elements, secteur)
+
+def secteur_existe(secteur):
+    code_secteur = secteur["details"]["code_secteur"]
+
+    return Secteur.objects.filter(pk=code_secteur).exists()
+
+def secteur_importe_unique(secteur):
+    return secteur["nb_secteurs"] == 1
+
+def chef_secteur_existe(secteur):
+    code_secteur = secteur["details"]["code_secteur"]
+    code_role = "chef"
+
+    return Utilisateur.objects.filter(codeSecteur_id=code_secteur, codeRole_id=code_role).exists()
+
+def chef_secteur_identique(secteur):
+    code_secteur = secteur["details"]["code_secteur"]
+    code_role = "chef"
+    chef_secteur_existant = Utilisateur.objects.get(codeSecteur_id=code_secteur, codeRole_id=code_role)
+    chef_secteur_csv = secteur["chef"]
+
+    return chef_secteur_existant.matricule == chef_secteur_csv["matricule"]
+
+def update_tableau_de_bord(nom_fichier, secteur):
+    tableau_de_bord[1,0,0] = nom_fichier
+    tableau_de_bord[1,1,0] = secteur["details"]["code_secteur"]
+    tableau_de_bord[1,2,0] = secteur["chef"]["matricule"]
+
+    if secteur_existe(secteur):
+        tableau_de_bord[1,1,1] = True
+    else:
+        tableau_de_bord[1,1,1] = False
+
+    if secteur_importe_unique(secteur):
+        tableau_de_bord[1,1,2] = True
+    else:
+        tableau_de_bord[1,1,2] = False
+
+    if chef_secteur_existe(secteur):
+        tableau_de_bord[1,2,1] = True
+        if chef_secteur_identique(secteur):
+            tableau_de_bord[1,2,2] = True
+        else:
+            tableau_de_bord[1,2,2] = False
+    else:
+        tableau_de_bord[1,2,1] = False
+
+def csv_est_conforme(tableau_de_bord):
+    chef_secteur_identique = tableau_de_bord[1,2,2]
+    import_secteur_unique = tableau_de_bord[1,1,2]
+
+    return import_secteur_unique and chef_secteur_identique
+
+def create_elements_csv(secteur):
+    create_secteur(secteur)
+    create_chef_secteur(secteur)
+    create_collaborateurs(secteur)
+
 def index(request, id_chef):
     if request.method == "POST":
         nom_fichier = request.POST["nom_fichier"]
         secteur = {}
 
+        init_tableau_de_bord()
+
         with open("W:/DevIA.E07/FT1B/quiz/secteurs/" + nom_fichier, 'r', newline='') as f:
             reader = csv.reader(f)
             secteur["collaborateurs"] = []
-            for index, row in enumerate(reader):
-                elements = row[0].split(";")
-                if index == 1:
-                    get_secteur(elements, secteur)
-                    get_infos_chef_secteur(elements, secteur)
-                    get_infos_collaborateur(elements, secteur)
-                elif index > 1:
-                    get_infos_collaborateur(elements, secteur)
-        create_secteur(secteur)
-        create_chef_secteur(secteur)
-        create_collaborateurs(secteur)
+            
+            get_infos_csv(reader, secteur) # on peuple le dictionnaire 'secteur'
+            update_tableau_de_bord(nom_fichier, secteur) # on peuple le tableau de bord
+
+            if csv_est_conforme(tableau_de_bord):
+                create_elements_csv(secteur) # on peuple la bdd en utilisant le dictionnaire 'secteur'
+            else:
+                print("csv non conforme")
 
     if request.user.is_authenticated: # l'utilisateur est bien connecté
         try: # on vérifie que l'id passé dans l'URL existe
