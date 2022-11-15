@@ -17,5 +17,7 @@
             </div>
         </li>
     </ol>
-    <a href="{{id_collaborateur}}/testquiz">Quiz</a>
+    {% if actif == True %}
+        <a href="{{id_collaborateur}}/testquiz">Quiz</a>
+    {% endif %}
 {% endblock %}

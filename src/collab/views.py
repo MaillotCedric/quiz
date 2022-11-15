@@ -18,6 +18,7 @@ def index(request, id_collaborateur):
     #metierTest = Metier(codemetier = 'JPRO', nommetier = "Joueur Pro")
     #metierTest.save()
     # return HttpResponse("Metier.objects.all()")
+    actif = Quiz.objects.get(noquiz="32").actif
     if request.user.is_authenticated: # l'utilisateur est bien connecté
         try: # on vérifie que l'id passé dans l'URL existe
             collaborateur = Utilisateur.objects.get(pk=id_collaborateur)
@@ -27,7 +28,9 @@ def index(request, id_collaborateur):
             if request.user.id == int(id_collaborateur): # on empêche un collaborateur d'aller sur une autre page de collaborateur
                 return render(request, "homeCollab.html", {
                     "collaborateur": collaborateur,
-                    "id_collaborateur" : id_collaborateur
+                    "id_collaborateur" : id_collaborateur,
+                    "actif" : actif
+
                 })
             else:
                 return redirect("home_collab", id_collaborateur = request.user.id) # le collaborateur est redirigé vers sa page d'acceuil dédiée
