@@ -5,7 +5,7 @@ from comptes.models import Utilisateur
 # Create your views here.
 from cds.models import Questions, PropositionsReponses, Quiz
 from django.template import loader
-from collab.models import ReponsesChoisiesv2, ReponsesChoisiesv3
+from collab.models import ReponsesChoisiesv3
 
 import xml.etree.ElementTree as etree
 import os
