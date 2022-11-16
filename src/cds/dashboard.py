@@ -1,7 +1,7 @@
 import numpy as np
 from comptes.models import Utilisateur, Secteur
 
-tableau_de_bord = tableau_de_bord = np.empty((2,3,3), dtype=object)
+tableau_de_bord = np.empty((2,3,3), dtype=object)
 
 def init_tableau_de_bord():
     tableau_de_bord[0,0,0] = "nom du fichier"
