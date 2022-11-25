@@ -99,7 +99,7 @@ def index(request, id_chef):
         nom_fichier = request.POST["nom_fichier"]
         secteur = {}
 
-        with open("W:/DevIA.E07/FT1B/quiz/secteurs/" + nom_fichier, 'r', newline='') as f:
+        with open("/home/cedric/quiz/secteurs/" + nom_fichier, 'r', newline='') as f:
             reader = csv.reader(f)
             secteur["collaborateurs"] = []
             for index, row in enumerate(reader):
