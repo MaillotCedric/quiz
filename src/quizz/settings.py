@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'collab',
     'cds',
-    'comptes'
+    'comptes',
+
+    "rest_framework"
 ]
 
 MIDDLEWARE = [

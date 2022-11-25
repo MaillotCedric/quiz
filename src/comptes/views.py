@@ -7,6 +7,13 @@ from comptes.models import Secteur
 from comptes.models import Utilisateur
 from django.contrib.auth.hashers import make_password
 
+def remove(request):
+    last_user = Utilisateur.objects.last()
+
+    last_user.delete()
+    
+    return render(request, "login.html", {})
+
 def create_roles():
     Role.objects.create(codeRole="admin", nomRole="administrateur")
     Role.objects.create(codeRole="chef", nomRole="chef de secteur")
