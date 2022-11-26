@@ -1,4 +1,18 @@
 {% extends 'base.html' %}
 
 {% block contenu %}
+<!-- <form id="ajax-call" action="{% url 'index_add' %}" method="POST"> -->
+<form id="ajax-call" method="POST">
+    {% csrf_token %}
+    <button class="btn btn-success" type="submit">Add</button>
+</form>
+<form id="ajax-delete" method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit">Delete</button>
+</form>
+<form id="ajax-graph" method="GET">
+    <button class="btn btn-primary" type="submit">Graph</button>
+</form>
+<p id="ajax"></p>
+<canvas id="myChart"></canvas>
 {% endblock %}

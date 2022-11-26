@@ -95,24 +95,24 @@ def create_collaborateurs(secteur):
         Utilisateur.objects.create(username=username, password=mot_de_passe, matricule=matricule, first_name=prenom, last_name=nom, codeSecteur=Secteur.objects.get(pk=code_secteur), codeRole=Role.objects.get(pk=code_role))
 
 def index(request, id_chef):
-    if request.method == "POST":
-        nom_fichier = request.POST["nom_fichier"]
-        secteur = {}
+    # if request.method == "POST":
+    #     nom_fichier = request.POST["nom_fichier"]
+    #     secteur = {}
 
-        with open("/home/cedric/quiz/secteurs/" + nom_fichier, 'r', newline='') as f:
-            reader = csv.reader(f)
-            secteur["collaborateurs"] = []
-            for index, row in enumerate(reader):
-                elements = row[0].split(";")
-                if index == 1:
-                    get_secteur(elements, secteur)
-                    get_infos_chef_secteur(elements, secteur)
-                    get_infos_collaborateur(elements, secteur)
-                elif index > 1:
-                    get_infos_collaborateur(elements, secteur)
-        create_secteur(secteur)
-        create_chef_secteur(secteur)
-        create_collaborateurs(secteur)
+    #     with open("/home/cedric/quiz/secteurs/" + nom_fichier, 'r', newline='') as f:
+    #         reader = csv.reader(f)
+    #         secteur["collaborateurs"] = []
+    #         for index, row in enumerate(reader):
+    #             elements = row[0].split(";")
+    #             if index == 1:
+    #                 get_secteur(elements, secteur)
+    #                 get_infos_chef_secteur(elements, secteur)
+    #                 get_infos_collaborateur(elements, secteur)
+    #             elif index > 1:
+    #                 get_infos_collaborateur(elements, secteur)
+    #     create_secteur(secteur)
+    #     create_chef_secteur(secteur)
+    #     create_collaborateurs(secteur)
 
     if request.user.is_authenticated: # l'utilisateur est bien connecté
         try: # on vérifie que l'id passé dans l'URL existe
