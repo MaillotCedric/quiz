@@ -2,17 +2,21 @@
 
 {% block contenu %}
 <!-- <form id="ajax-call" action="{% url 'index_add' %}" method="POST"> -->
-<form id="ajax-call" method="POST">
-    {% csrf_token %}
-    <button class="btn btn-success" type="submit">Add</button>
-</form>
-<form id="ajax-delete" method="POST">
-    {% csrf_token %}
-    <button class="btn btn-danger" type="submit">Delete</button>
-</form>
-<form id="ajax-graph" method="GET">
-    <button class="btn btn-primary" type="submit">Graph</button>
-</form>
+<div style="display:flex; margin-top: 10px;">
+    <form id="ajax-call" method="POST" style="margin-left: 5px; margin-right: 5px;">
+        {% csrf_token %}
+        <button class="btn btn-success" type="submit">Ajouter Toto</button>
+    </form>
+    <form id="ajax-delete" method="POST" style="margin-right: 5px;">
+        {% csrf_token %}
+        <button class="btn btn-danger" type="submit">Effacer Toto</button>
+    </form>
+    <form id="ajax-graph" method="GET" style="margin-right: 5px;">
+        <button class="btn btn-primary" type="submit">Afficher le graphique</button>
+    </form>
+</div>
 <p id="ajax"></p>
-<canvas id="myChart"></canvas>
+<div style="position: relative; height:10vh; width:30vw">
+    <canvas id="myChart"></canvas>
+</div>
 {% endblock %}

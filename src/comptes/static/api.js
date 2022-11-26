@@ -3,7 +3,8 @@ let nouvel_utilisateur = {
     "password": "azerty",
     "matricule": "CCCC",
     "codeSecteur": "RD",
-    "codeRole": "collab"
+    "codeRole": "collab",
+    "is_active": true
 };
 
 let matricule = "CCCC";
@@ -34,7 +35,7 @@ function afficher_graph(json) {
                 label: 'employés/secteurs',
                 data: y,
                 borderWidth: 1,
-                backgroundColor: '#9BD0F5'
+                backgroundColor: ['#9BD0F5']
             }]
         },
         options: {
